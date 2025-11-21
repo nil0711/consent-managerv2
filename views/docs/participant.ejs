@@ -1,0 +1,56 @@
+<%
+  bodyClass = "docs-shell";
+  pageId = "docs-participant";
+  pageKind = "docs";
+%>
+
+<section class="docs-container">
+  <%- include('partials/brand-pill') %>
+
+  <header class="docs-header">
+    <div class="docs-badge">For participants</div>
+    <h1 class="docs-title">Participant onboarding guide</h1>
+    <p class="docs-lead">You received a study invite. Here’s what to expect before you share any data.</p>
+  </header>
+
+  <section class="docs-card docs-steps">
+    <ol class="docs-ordered">
+      <li>
+        <h3>Sign in or create an account</h3>
+        <p>Use your preferred email and a secure password. We only ask for extra details if the study requires them.</p>
+      </li>
+      <li>
+        <h3>Join the study</h3>
+        <p>Follow the invite link or paste the study code supplied by your researcher. You’ll review consent before anything else.</p>
+      </li>
+      <li>
+        <h3>Review and store consent</h3>
+        <p>Download or print your consent receipt. You can revisit it, revoke it, or request deletion later.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="docs-card docs-columns">
+    <h2 class="docs-section-title">What to look for in a consent notice</h2>
+    <div class="docs-columns-grid">
+      <div>
+        <h4>Purpose</h4>
+        <p>Why the study exists and how your contribution helps.</p>
+      </div>
+      <div>
+        <h4>Data collected</h4>
+        <p>The exact fields gathered, and which are optional.</p>
+      </div>
+      <div>
+        <h4>Retention &amp; deletion</h4>
+        <p>How long data is kept and how to request removal.</p>
+      </div>
+      <div>
+        <h4>Withdrawal process</h4>
+        <p>Steps to revoke consent and what happens afterwards.</p>
+      </div>
+    </div>
+  </section>
+
+  <a class="docs-link" href="/signup?role=participant">Sign up as participant ↗</a>
+</section>

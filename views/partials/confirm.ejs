@@ -1,0 +1,18 @@
+<dialog
+  id="cm-confirm"
+  class="cm-modal"
+  aria-labelledby="cm-confirm-title"
+  aria-describedby="cm-confirm-body">
+  <div class="cm-modal__card">
+    <h3 id="cm-confirm-title" class="cm-modal__title" data-confirm-title>Confirm action</h3>
+    <div class="cm-modal__body" id="cm-confirm-body">
+      <p class="cm-modal__message" data-confirm-text>Are you sure?</p>
+      <div class="cm-toast cm-toast--error" data-confirm-error hidden></div>
+      <div class="cm-modal__extra" data-confirm-extra hidden></div>
+    </div>
+    <div class="cm-modal__actions">
+      <button type="button" class="cm-btn js-cancel">Cancel</button>
+      <button type="button" class="cm-btn cm-btn--danger js-confirm">Confirm</button>
+    </div>
+  </div>
+</dialog>

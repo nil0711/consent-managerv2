@@ -1,0 +1,135 @@
+<div class="participant-grid">
+  <section class="participant-left">
+    <div class="panel panel-join">
+      <div class="panel-header">
+        <div>
+          <h2>Join a study</h2>
+          <p class="panel-subtle">Paste the code sent by your researcher.</p>
+        </div>
+      </div>
+      <div class="panel-body">
+        <form class="join-form" method="post" action="/participant/join" novalidate>
+          <label class="sr-only" for="join-code">Study code</label>
+          <input
+            id="join-code"
+            name="code"
+            type="text"
+            value="<%= joinState && joinState.code ? joinState.code : '' %>"
+            placeholder="e.g. CIVIC-7N3F"
+            class="join-input"
+            autocomplete="off"
+          />
+          <button type="submit" class="join-action" data-mode="join">Join study</button>
+        </form>
+        <p
+          class="join-hint <%= joinState ? (joinState.valid ? 'is-valid' : 'is-error') : '' %>"
+          data-join-hint
+          data-join-kind="<%= joinState ? joinState.kind : '' %>"
+        >
+          <% if (joinState && joinState.message) { %>
+            <%= joinState.message %>
+          <% } else { %>
+            Looks good. Join to add it to your dashboard.
+          <% } %>
+        </p>
+        <div class="join-preview" data-join-preview hidden></div>
+      </div>
+    </div>
+
+    <div class="panel panel-fill panel-enrolled">
+      <div class="panel-header">
+        <div>
+          <h2>Enrolled studies</h2>
+          <p class="panel-subtle">Keep track of everything you have access to right now.</p>
+        </div>
+        <span class="panel-count"><%= enrolledStudies.length %></span>
+      </div>
+      <div class="panel-body panel-body-fill">
+        <div class="panel-search">
+          <label class="sr-only" for="enrolled-filter">Filter enrolled studies</label>
+          <input
+            id="enrolled-filter"
+            type="text"
+            class="enrolled-filter"
+            placeholder="Search enrolled"
+            autocomplete="off"
+          />
+        </div>
+        <div class="enrolled-list scroll-y">
+          <% if (!enrolledStudies.length) { %>
+            <p class="enrolled-empty">No enrolled studies yet. Paste a code above to join.</p>
+          <% } else { %>
+            <% enrolledStudies.forEach(function (study) { %>
+              <article class="enrolled-item">
+                <div class="enrolled-meta">
+                  <h3><%= study.title %></h3>
+                  <p class="muted"><%= study.researcherName %> • <%= study.reviewTime %></p>
+                </div>
+                <div class="enrolled-actions">
+                  <a href="/participant/studies/<%= study.slug %>" class="ghost">Open</a>
+                  <form method="post" action="/participant/studies/<%= study.slug %>/unenroll">
+                    <button type="submit" class="danger">Unenroll</button>
+                  </form>
+                </div>
+              </article>
+            <% }) %>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="participant-right">
+    <div class="panel panel-top">
+      <div class="panel-header">
+        <div>
+          <h2>Trending &amp; Recommended</h2>
+          <p class="panel-subtle">Based on what participants like you explore.</p>
+        </div>
+        <span class="panel-count"><%= recommendedStudies.length %></span>
+      </div>
+      <div class="panel-body">
+        <div class="recommended-list scroll-y">
+          <% if (!recommendedStudies.length) { %>
+            <p class="recommended-empty">We’ll suggest studies once you join or browse a few topics.</p>
+          <% } else { %>
+            <% recommendedStudies.forEach(function (study) { %>
+              <article class="recommended-item">
+                <div class="recommended-meta">
+                  <h3><%= study.title %></h3>
+                  <% if (study.tagline) { %>
+                    <p class="muted"><%= study.tagline %></p>
+                  <% } %>
+                  <% if (study.category) { %>
+                    <span class="badge"><%= study.category %></span>
+                  <% } %>
+                </div>
+                <a href="/participant/studies/<%= study.slug %>" class="ghost">View</a>
+              </article>
+            <% }) %>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-chat">
+      <div class="panel-header">
+        <h2>What other participants did</h2>
+      </div>
+      <div class="chat-messages scroll-y">
+        <div class="chat-empty">Not sure what to accept? Ask what other participants usually did.</div>
+      </div>
+      <div class="chat-input">
+        <form class="p-chat-form" id="p-chat-form">
+          <label class="sr-only" for="p-chat-input">Message other participants</label>
+          <input
+            id="p-chat-input"
+            type="text"
+            placeholder="Ask what other participants did…"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+    </div>
+  </aside>
+</div>

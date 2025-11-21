@@ -1,0 +1,34 @@
+<section class="cm-diff" role="dialog" aria-modal="true" aria-labelledby="cmp-title">
+  <div class="cm-diff__card" tabindex="-1">
+    <header class="cm-diff__head">
+      <h3 id="cmp-title" class="cm-title">
+        Compare <%= a.label %> ↔ <%= b.label %>
+      </h3>
+      <button class="cm-btn cm-btn--ghost" data-close-diff aria-label="Close">×</button>
+    </header>
+
+    <div class="cm-diff__summary">
+      <span class="chip">+ <%= added.length %> added</span>
+      <span class="chip">- <%= removed.length %> removed</span>
+    </div>
+
+    <div class="diff-rows">
+      <% if (permissions && permissions.length) { %>
+        <% permissions.forEach(function(row){ %>
+          <div class="diff-row <%= row.same ? 'row--same' : 'row--diff' %>">
+            <span><%= row.label %></span>
+            <span>v<%= a.version %>: <%= row.a ? 'Granted' : 'Not granted' %></span>
+            <span>v<%= b.version %>: <%= row.b ? 'Granted' : 'Not granted' %></span>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p class="version-meta">Permissions are identical.</p>
+      <% } %>
+    </div>
+
+    <footer class="cm-diff__footer">
+      <button class="cm-btn" data-download-diff>Download diff PDF</button>
+      <button class="cm-btn" data-close-diff>Close</button>
+    </footer>
+  </div>
+</section>

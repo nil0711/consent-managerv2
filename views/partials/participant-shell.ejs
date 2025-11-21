@@ -1,0 +1,29 @@
+<div class="participant-shell">
+  <header class="participant-topbar">
+    <div class="participant-topbar-left">
+      <!-- phase 3: brand / navigation -->
+    </div>
+    <% if (typeof currentUser !== "undefined" && currentUser) { %>
+      <div class="participant-user">
+        <button class="participant-user-trigger" type="button" aria-expanded="false">
+          <span class="avatar"><%= currentUser.initials || "P" %></span>
+          <span class="name"><%= currentUser.name || currentUser.email || "Participant" %></span>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="participant-user-menu" hidden>
+          <div class="participant-user-meta">
+            <p class="label">Signed in as</p>
+            <p class="value"><%= currentUser.email || "" %></p>
+          </div>
+          <a href="/participant/past" class="menu-item">Past studies</a>
+          <a href="/login?switch=1" class="menu-item">Change role</a>
+          <button type="button" class="menu-item logout" data-action="logout">Log out</button>
+        </div>
+      </div>
+    <% } %>
+  </header>
+
+  <main class="participant-body">
+    <%- body %>
+  </main>
+</div>

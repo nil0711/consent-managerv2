@@ -1,0 +1,88 @@
+<%
+  const existingBodyClass = (typeof bodyClass === "string" && bodyClass.trim().length > 0)
+    ? bodyClass.trim()
+    : "";
+  bodyClass = [existingBodyClass, "auth-shell"].filter(Boolean).join(" ");
+  pageId = "login";
+  pageKind = "auth";
+%>
+
+<div class="auth-shell-frame" data-page="login">
+  <div class="auth-wrapper">
+    <%- include('partials/brand-pill') %>
+    <div class="cm-utility">
+      <button class="cm-info" type="button" aria-expanded="false" aria-controls="cm-help" aria-haspopup="dialog">
+        <span class="sr-only">How to use this</span>
+        i
+      </button>
+      <div id="cm-help" class="cm-help is-hidden" role="dialog" aria-label="How to use Consent Manager" tabindex="-1">
+        <h2 class="cm-help-title">What do you want to do?</h2>
+        <ul class="cm-help-list">
+          <li>
+            <a href="/signup?role=participant" data-role="participant">
+              <span class="cm-help-icon" aria-hidden="true">🧭</span>
+              <span class="cm-help-copy">I’m a participant → join a study</span>
+            </a>
+          </li>
+          <li>
+            <a href="/signup?role=researcher" data-role="researcher">
+              <span class="cm-help-icon" aria-hidden="true">🧪</span>
+              <span class="cm-help-copy">I’m a researcher → create a study</span>
+            </a>
+          </li>
+          <li>
+            <a href="/docs/consent" data-doc="consent">
+              <span class="cm-help-icon" aria-hidden="true">📚</span>
+              <span class="cm-help-copy">Consent rules / FAQ</span>
+            </a>
+          </li>
+        </ul>
+        <p class="cm-help-hint">Tip: you can change roles later.</p>
+      </div>
+    </div>
+
+    <div class="cm-card">
+      <div class="cm-card-body">
+        <div>
+          <h1 class="cm-title">Sign in to Consent Manager</h1>
+          <p class="cm-subtitle">Access your dashboard and keep consent data current.</p>
+        </div>
+
+        <% if (typeof error !== 'undefined' && error) { %>
+          <div class="alert-error"><%= error %></div>
+        <% } %>
+        <% if (typeof notice !== 'undefined' && notice) { %>
+          <div class="notice"><%= notice %></div>
+        <% } %>
+
+        <form method="post" action="/login" class="cm-form">
+          <div class="cm-field">
+            <label class="cm-label" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="cm-input"
+                   autocomplete="email" value="<%= (typeof email !== 'undefined' && email) ? email : '' %>">
+          </div>
+
+          <div class="cm-field">
+            <label class="cm-label" for="password">Password</label>
+            <input id="password" name="password" type="password" required class="cm-input"
+                   autocomplete="current-password">
+          </div>
+
+          <% if (typeof error !== 'undefined' && error) { %>
+            <a class="cm-link helper-visible" href="/login/forgot">Forgot password?</a>
+          <% } else { %>
+            <a class="cm-link helper-hidden" href="/login/forgot">Forgot password?</a>
+          <% } %>
+
+          <button type="submit" class="cm-submit">Log in</button>
+        </form>
+
+        <div class="cm-footer">
+          <span>No account?</span>
+          <a class="cm-link" href="/signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+    <div class="cm-overlay is-hidden" id="cm-overlay" aria-hidden="true"></div>
+  </div>
+</div>

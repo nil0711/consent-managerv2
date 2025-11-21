@@ -1,0 +1,208 @@
+<%
+  const ownerName = owner && owner.name ? owner.name : "Research team";
+  const ownerOrg = owner && owner.institution ? owner.institution : "";
+  const summaryText =
+    (study && study.summary) ||
+    (study && study.purpose) ||
+    "Summary coming soon.";
+  const collectedTags =
+    (Array.isArray(collected) && collected.length && collected) ||
+    (Array.isArray(study && study.tags) ? study.tags.slice(0, 6) : []);
+  const retentionText =
+    (retention && retention.label) || "No retention information provided.";
+  const riskText =
+    risk && risk.level ? `${risk.level} risk` : "Risk not specified.";
+  const consentStamp =
+    consentVersion && consentVersion.updatedLabel
+      ? consentVersion.updatedLabel
+      : null;
+  const studyTitle = (study && study.title) || "Study";
+  const studySummary = (study && study.summary) || "";
+  const downloadHref = study && study.id
+    ? `/participant/studies/${encodeURIComponent(study.id)}/pdf/snapshot`
+    : "#";
+  const isEnrolled = userEnrollment && userEnrollment.status === "ENROLLED";
+%>
+
+<div
+  class="cm-modal-host"
+  data-study-modal
+  data-study-id="<%= study && study.id ? study.id : '' %>"
+  data-enrollment-status="<%= (userEnrollment && userEnrollment.status) ? userEnrollment.status : 'UNENROLLED' %>"
+  data-context-version="<%= contextVersion || '' %>"
+  data-chat-fallback="<%= chatFallback || '' %>"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="study-modal-title"
+>
+  <div class="cm-study-grid">
+    <section class="cm-pane cm-study-head">
+      <div class="cm-pane-head" style="display:flex;align-items:flex-start;gap:1rem;justify-content:space-between;">
+        <div>
+          <h3 id="study-modal-title" class="cm-title" style="margin:0;">
+            <%= studyTitle %>
+          </h3>
+          <% if (studySummary) { %>
+            <p class="cm-layer__summary" style="margin:.35rem 0 0;">
+              <%= studySummary %>
+            </p>
+          <% } %>
+        </div>
+        <button type="button" class="cm-btn cm-btn--ghost js-close" aria-label="Close study modal">×</button>
+      </div>
+    </section>
+
+    <section class="cm-pane cm-study-left" aria-labelledby="study-permissions-title">
+      <div class="cm-pane-head">
+        <h3 id="study-permissions-title" class="cm-card__title" style="margin:0;">Permissions</h3>
+        <p class="cm-card__sub" style="margin:.35rem 0 0;">Toggle what you agree to share. Required items stay locked.</p>
+      </div>
+      <div class="cm-pane-body" data-permissions>
+        <ul class="cm-perms" style="list-style:none;padding:0;margin:0;">
+          <% if (Array.isArray(permissions) && permissions.length) { %>
+            <% permissions.forEach(function (perm) { %>
+              <li
+                class="cm-perm <%= perm.required ? 'cm-perm--req' : '' %> <%= perm.sensitive ? 'cm-perm--sens' : '' %> <%= perm.granted ? 'is-on' : '' %>"
+                data-key="<%= perm.key %>"
+              >
+                <span class="cm-perm-rail" aria-hidden="true"></span>
+                <label class="cm-toggle <%= perm.granted ? 'is-on' : '' %> <%= perm.required ? 'is-locked' : '' %>">
+                  <input
+                    type="checkbox"
+                    class="js-perm"
+                    data-perm-key="<%= perm.key %>"
+                    <%= perm.granted ? 'checked' : '' %>
+                    <%= perm.required ? 'disabled' : '' %>
+                    aria-label="<%= perm.label %>"
+                    data-required="<%= perm.required %>"
+                    style="position:absolute;opacity:0;pointer-events:none;"
+                  >
+                </label>
+                <div class="cm-perm__body" style="flex:1;display:flex;flex-direction:column;gap:.45rem;">
+                  <div class="cm-perm__title" style="display:flex;align-items:center;gap:.45rem;font-weight:600;">
+                    <span><%= perm.label %></span>
+                    <% if (perm.required) { %>
+                      <span class="cm-chip cm-chip--req" title="Required permission">required</span>
+                    <% } %>
+                    <% if (perm.sensitive) { %>
+                      <span class="cm-chip cm-chip--sens" title="Higher sensitivity">sensitive</span>
+                    <% } %>
+                  </div>
+                  <% if (perm.description) { %>
+                    <p class="cm-perm__desc" style="margin:0;color:var(--cm-muted);"><%= perm.description %></p>
+                  <% } %>
+                </div>
+              </li>
+            <% }); %>
+          <% } else { %>
+            <li class="cm-perm" style="justify-content:center;">
+              <p class="cm-perm__desc" style="margin:0;">No permissions listed for this study.</p>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+
+    <div class="cm-study-right">
+      <section class="cm-pane" aria-labelledby="study-about-title">
+        <div class="cm-pane-head">
+          <h3 id="study-about-title" class="cm-card__title" style="margin:0;">About this study</h3>
+        </div>
+        <div class="cm-pane-body">
+          <dl class="cm-about__grid">
+            <div class="cm-about__row">
+              <dt>Who &amp; why</dt>
+              <dd>
+                <div class="cm-about__lead"><%= ownerName %></div>
+                <% if (ownerOrg) { %>
+                  <div class="cm-about__org"><%= ownerOrg %></div>
+                <% } %>
+                <% if (summaryText) { %>
+                  <p class="cm-about__summary"><%= summaryText %></p>
+                <% } %>
+              </dd>
+            </div>
+            <div class="cm-about__row">
+              <dt>What’s collected</dt>
+              <dd>
+                <% if (collectedTags.length) { %>
+                  <div class="cm-tags">
+                    <% collectedTags.forEach(function(tag) { %>
+                      <span class="cm-tag"><%= tag %></span>
+                    <% }); %>
+                  </div>
+                <% } else { %>
+                  <span class="cm-about__summary">No collection details yet.</span>
+                <% } %>
+              </dd>
+            </div>
+            <div class="cm-about__row">
+              <dt>Retention</dt>
+              <dd><%= retentionText %></dd>
+            </div>
+            <% if (effort) { %>
+              <div class="cm-about__row">
+                <dt>Time &amp; effort</dt>
+                <dd><%= effort %></dd>
+              </div>
+            <% } %>
+            <div class="cm-about__row">
+              <dt>Risks</dt>
+              <dd><%= riskText %></dd>
+            </div>
+            <% if (consentVersion && consentVersion.version) { %>
+              <div class="cm-about__row">
+                <dt>Consent</dt>
+                <dd>
+                  <div class="cm-tags">
+                    <span class="cm-tag">Consent v<%= consentVersion.version %></span>
+                    <% if (consentStamp) { %>
+                      <span class="cm-tag">Updated <%= consentStamp %></span>
+                    <% } %>
+                  </div>
+                </dd>
+              </div>
+            <% } %>
+          </dl>
+        </div>
+      </section>
+
+      <section class="cm-pane" aria-labelledby="study-chat-title">
+        <div class="cm-pane-head">
+          <h3 id="study-chat-title" class="cm-card__title" style="margin:0;">Ask about this study</h3>
+        </div>
+        <div class="cm-pane-body" style="gap:1rem;">
+          <div class="cm-pane__scroll" id="chatScroll" style="flex:1;overflow:auto;">
+            <div id="cm-chat" class="cm-chat" aria-live="polite"></div>
+          </div>
+          <div class="cm-chat__composer" style="border-top:1px dashed var(--cm-border);padding-top:0.75rem;">
+            <form id="cm-chat-form" class="cm-chat__form" style="display:flex;gap:0.75rem;align-items:flex-end;">
+              <textarea
+                id="cm-chat-input"
+                class="cm-input cm-chat__input"
+                rows="1"
+                placeholder="Ask about purpose, data, or withdrawal. Enter sends, Shift+Enter adds a new line."
+                style="flex:1;min-height:48px;max-height:140px;resize:none;"
+              ></textarea>
+              <button type="submit" class="cm-btn cm-btn--accent" id="cm-chat-send">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cm-footer">
+      <button type="button" class="cm-btn cm-btn--secondary js-save-version" id="btnSaveVersion">Save version</button>
+      <button type="button" class="cm-btn cm-btn--secondary js-open-versions" id="btnVersions">Versions</button>
+      <button type="button" class="cm-btn cm-btn--secondary" id="btnDownload" data-download-href="<%= downloadHref %>">Download consent</button>
+      <button
+        type="button"
+        class="cm-btn <%= isEnrolled ? 'cm-btn--danger' : 'cm-btn--success' %> js-primary js-toggle-enroll"
+        data-default-label="<%= isEnrolled ? 'Unenroll' : 'Enroll' %>"
+        data-action="<%= isEnrolled ? 'unenroll' : 'enroll' %>"
+      >
+        <%= isEnrolled ? 'Unenroll' : 'Enroll' %>
+      </button>
+    </div>
+  </div>
+</div>

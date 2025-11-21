@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Consent Snapshot</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: #0f172a;
+        margin: 0;
+        padding: 32px 36px;
+        background: #ffffff;
+        line-height: 1.45;
+        font-size: 13px;
+      }
+      header { border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+      h1 { margin: 0; font-size: 22px; color: #111827; }
+      h2 { margin: 24px 0 10px; font-size: 16px; color: #1f2937; }
+      dl.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px 18px; margin: 0; }
+      dl.meta dt { font-weight: 600; color: #1f2937; }
+      dl.meta dd { margin: 2px 0 0; }
+      .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px 18px; }
+      .summary-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; }
+      .summary-card h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: #475569; }
+      table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+      th, td { padding: 10px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+      th { background: #f1f5f9; text-align: left; font-size: 12px; color: #1f2937; }
+      .chip { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; border: 1px solid #cbd5f5; margin-right: 6px; }
+      .chip.req { background: rgba(245, 158, 11, 0.18); border-color: #f59e0b; color: #92400e; }
+      .chip.sens { background: rgba(239, 68, 68, 0.15); border-color: #ef4444; color: #b91c1c; }
+      footer { margin-top: 28px; padding-top: 16px; border-top: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+      .doc-meta { font-size: 12px; color: #475569; }
+      .doc-meta strong { color: #1f2937; }
+      .qr { width: 120px; height: 120px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Consent Snapshot</h1>
+        <div style="font-size:12px;color:#475569;margin-top:6px;">
+          Issued <%= (issuedAt || new Date()).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:13px;font-weight:600;">Study</div>
+        <div style="font-size:15px;color:#1f2937;max-width:280px;"><%= study.title %></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Study Overview</h2>
+      <dl class="meta">
+        <div>
+          <dt>Owner</dt>
+          <dd><%= researcher?.name || "Research team" %></dd>
+        </div>
+        <div>
+          <dt>Institution</dt>
+          <dd><%= researcher?.affiliation || "Independent" %></dd>
+        </div>
+        <div>
+          <dt>Version</dt>
+          <dd><%= version?.version ? `Version ${version.version}` : "Snapshot" %> · <%= version?.createdAt ? new Date(version.createdAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) : "unknown" %></dd>
+        </div>
+      </dl>
+
+      <div class="summary-grid" style="margin-top:16px;">
+        <div class="summary-card">
+          <h3>Summary</h3>
+          <p><%= summary?.summary || "Summary not available." %></p>
+        </div>
+        <% if (summary?.why) { %>
+          <div class="summary-card">
+            <h3>Why participate</h3>
+            <p><%= summary.why %></p>
+          </div>
+        <% } %>
+        <% if (summary?.time_effort) { %>
+          <div class="summary-card">
+            <h3>Time &amp; effort</h3>
+            <p><%= summary.time_effort %></p>
+          </div>
+        <% } %>
+        <% if (summary?.retention_phrase) { %>
+          <div class="summary-card">
+            <h3>Retention</h3>
+            <p><%= summary.retention_phrase %></p>
+          </div>
+        <% } %>
+        <% if (summary?.risks_short) { %>
+          <div class="summary-card">
+            <h3>Risks</h3>
+            <p><%= summary.risks_short %></p>
+          </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:34%;">Permission</th>
+            <th>Description</th>
+            <th style="width:20%;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% permissions.forEach((perm) => { %>
+            <tr>
+              <td>
+                <div style="font-weight:600;color:#1f2937;">
+                  <%= perm.label %>
+                </div>
+                <div style="margin-top:4px;">
+                  <% if (perm.required) { %>
+                    <span class="chip req">Required</span>
+                  <% } %>
+                  <% if (perm.sensitive) { %>
+                    <span class="chip sens">Sensitive</span>
+                  <% } %>
+                </div>
+              </td>
+              <td><%= perm.description || "" %></td>
+              <td>
+                <strong><%= perm.granted ? "Granted" : "Not granted" %></strong>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div class="doc-meta">
+        <div><strong>Document ID:</strong> <%= docId %></div>
+        <div><strong>Verify:</strong> <%= verifyUrl %></div>
+      </div>
+      <img class="qr" src="<%- qr %>" alt="Verification QR code" />
+    </footer>
+  </body>
+</html>

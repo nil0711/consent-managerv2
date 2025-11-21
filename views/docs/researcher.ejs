@@ -1,0 +1,68 @@
+<%
+  bodyClass = "docs-shell";
+  pageId = "docs-researcher";
+  pageKind = "docs";
+%>
+
+<section class="docs-container">
+  <%- include('partials/brand-pill') %>
+
+  <header class="docs-header">
+    <div class="docs-badge">For researchers</div>
+    <h1 class="docs-title">Researcher quickstart</h1>
+    <p class="docs-lead">Publish studies, manage participants, and keep every consent auditable in minutes.</p>
+  </header>
+
+  <section class="docs-card docs-checklist">
+    <ol class="docs-ordered">
+      <li>
+        <h3>Create your researcher account</h3>
+        <p>Use your institutional email so participants can verify who you are.</p>
+        <a class="docs-link" href="/signup?role=researcher">Create researcher account ↗</a>
+      </li>
+      <li>
+        <h3>Create a study</h3>
+        <p>Define the study title, retention policy, and add optional tags for discovery.</p>
+      </li>
+      <li>
+        <h3>Attach a consent template</h3>
+        <p>Upload your standard consent, or start with our built-in template and customise it.</p>
+      </li>
+      <li>
+        <h3>Share the participant link</h3>
+        <p>Generate unique invite links or share the study code with your cohort.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="docs-card docs-columns">
+    <h2 class="docs-section-title">Best practices</h2>
+    <div class="docs-columns-grid">
+      <div>
+        <h4>Version your consent</h4>
+        <p>Each edit should bump a version number so participants can compare diffs.</p>
+      </div>
+      <div>
+        <h4>Export your audit</h4>
+        <p>Download consent logs before closing a study to meet compliance requirements.</p>
+      </div>
+      <div>
+        <h4>Use institution email</h4>
+        <p>It improves trust and makes verification easier for participants.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="docs-grid docs-resources">
+    <a class="docs-card docs-link-card" href="/docs/consent">
+      <h3>Consent rules &amp; FAQ</h3>
+      <p>Quick refresher on what data you can collect and how withdrawals are handled.</p>
+      <span class="docs-link">Read consent guidance ↗</span>
+    </a>
+    <a class="docs-card docs-link-card" href="/docs/participant">
+      <h3>Participant onboarding</h3>
+      <p>Share this guide with your cohort so they know what happens with their data.</p>
+      <span class="docs-link">Send to participants ↗</span>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,230 @@
+<%
+  const chips = Array.isArray(statusChips) ? statusChips : [];
+  const tagList = Array.isArray(study?.tags) ? study.tags : [];
+  const permissionsList = Array.isArray(permissions) ? permissions : [];
+  const summaryDoc = summary || {};
+  const showSummary = summaryDoc.summary || summaryText || "";
+  const why = summaryDoc.why || "—";
+  const effortText = summaryDoc.time_effort || effort || "—";
+  const retentionText = summaryDoc.retention_phrase || retention?.label || "—";
+  const risksText = summaryDoc.risks_short || risk?.level || "—";
+  const participants = stats?.participants ?? 0;
+  const updatedLabel = stats?.updatedLabel || null;
+  const versionLabel = consentVersion?.version ? `Version ${consentVersion.version}` : "Latest";
+  const isStudyArchived = Boolean(isArchived);
+%>
+<div
+  class="cm-modal-host"
+  data-researcher-study-modal
+  data-study-id="<%= study?.id %>"
+  data-study-code="<%= study?.joinCode || '' %>"
+  data-study-title="<%= study?.title || '' %>"
+  data-archived="<%= isArchived ? 'true' : 'false' %>"
+>
+  <div class="cm-modal-shell">
+    <header class="cm-modal-header cm-modal-header--researcher">
+      <div class="cm-modal-title">
+        <p class="cm-modal-kicker">Study</p>
+        <h2><%= study?.title %></h2>
+        <% if (showSummary) { %>
+          <p class="cm-modal-subhead"><%= showSummary %></p>
+        <% } %>
+        <% if (chips.length) { %>
+          <div class="cm-chip-row" data-status-chips>
+            <% chips.forEach(function (chip) { %>
+              <span class="cm-chip" data-study-status-chip><%= chip %></span>
+            <% }); %>
+          </div>
+        <% } %>
+      </div>
+      <div class="cm-modal-actions">
+        <button type="button" class="cm-btn" data-act="clone">Clone</button>
+        <button
+          type="button"
+          class="cm-btn cm-btn--ghost <%= isArchived ? 'is-hidden' : '' %>"
+          data-act="archive"
+        >Archive</button>
+        <button
+          type="button"
+          class="cm-btn cm-btn--accent <%= isArchived ? '' : 'is-hidden' %>"
+          data-act="unarchive"
+        >Unarchive</button>
+        <button type="button" class="cm-btn cm-btn--ghost" data-act="export">Export</button>
+        <% if (canDrop) { %>
+          <button type="button" class="cm-btn cm-btn--danger" data-act="drop">Drop</button>
+        <% } %>
+        <% if (canShare) { %>
+          <button type="button" class="cm-btn cm-btn--ghost" data-act="share" data-share-code="<%= study?.joinCode || '' %>">Share</button>
+        <% } %>
+        <button type="button" class="cm-btn cm-btn--ghost" data-act="close" aria-label="Close">Close</button>
+      </div>
+    </header>
+
+    <div class="cm-modal-grid cm-modal-grid--researcher">
+      <section class="cm-pane cm-pane--perms">
+        <div class="cm-pane__head perms-head">
+          <div>
+            <h3>Permissions</h3>
+            <p class="cm-pane__hint">Manage consent requirements for this study.</p>
+          </div>
+          <div class="perm-toolbar">
+            <div class="perm-toolbar__search">
+              <input
+                type="search"
+                id="perm-search"
+                placeholder="Search &amp; add permission"
+                autocomplete="off"
+                <%= isStudyArchived ? 'disabled' : '' %>
+              >
+              <div class="perm-suggest is-hidden" data-perm-suggest></div>
+              <div class="perm-create is-hidden" data-perm-create>
+                <div class="perm-create__text" data-perm-create-label></div>
+                <div class="perm-create__actions">
+                  <button type="button" class="cm-btn cm-btn--accent" data-act="perm-create-confirm">Create</button>
+                  <button type="button" class="cm-btn cm-btn--ghost" data-act="perm-create-cancel">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <% if (!isStudyArchived) { %>
+              <label class="perm-edit-toggle">
+                <input type="checkbox" id="perm-edit" data-perm-edit>
+                <span>Edit</span>
+              </label>
+            <% } %>
+          </div>
+        </div>
+        <div class="perms-scroll" data-perms-scroll>
+          <% if (permissionsList.length) { %>
+            <ul class="cm-perms" data-perm-list>
+              <% permissionsList.forEach(function (perm) { %>
+                  <li
+                    class="cm-perm cm-perm--readonly"
+                    data-perm-item
+                    data-perm-id="<%= perm.permissionId || perm.id %>"
+                    data-perm-link="<%= perm.linkId || perm.studyPermissionId || '' %>"
+                    data-perm-slug="<%= perm.slug || perm.permissionSlug || '' %>">
+                    <div class="cm-perm__meta">
+                      <div class="cm-perm__title">
+                        <span><%= perm.label %></span>
+                        <div class="cm-perm__badges">
+                          <% if (perm.required) { %>
+                            <span class="cm-badge">required</span>
+                          <% } %>
+                          <% if (perm.sensitive) { %>
+                            <span class="cm-badge cm-badge--warn">sensitive</span>
+                          <% } %>
+                        </div>
+                      </div>
+                      <% if (perm.blurb) { %>
+                        <p class="cm-perm__blurb"><%= perm.blurb %></p>
+                      <% } %>
+                      <% if (perm.description) { %>
+                        <p class="cm-perm__detail"><%= perm.description %></p>
+                      <% } %>
+                      <div class="cm-perm__chips">
+                        <span class="cm-chip <%= perm.required ? 'cm-chip--on' : '' %>" data-pill="required">Required</span>
+                        <span class="cm-chip cm-chip--warn <%= perm.sensitive ? 'cm-chip--on' : '' %>" data-pill="sensitive">Sensitive</span>
+                      </div>
+                      <% if (!isStudyArchived) { %>
+                        <div class="cm-perm__toggles is-hidden" data-perm-toggles>
+                          <label class="tiny-switch">
+                            <input
+                              type="checkbox"
+                              data-toggle="required"
+                              data-perm="<%= perm.id %>"
+                              <%= perm.required ? 'checked' : '' %>
+                              disabled>
+                            <span>Required</span>
+                          </label>
+                          <label class="tiny-switch">
+                            <input
+                              type="checkbox"
+                              data-toggle="sensitive"
+                              data-perm="<%= perm.id %>"
+                              <%= perm.sensitive ? 'checked' : '' %>
+                              disabled>
+                            <span>Sensitive</span>
+                          </label>
+                        </div>
+                      <% } %>
+                    </div>
+                  </li>
+                <% }); %>
+              </ul>
+            <% } else { %>
+              <p class="cm-muted" data-perm-empty>Permissions have not been configured yet.</p>
+            <% } %>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cm-pane cm-pane--meta">
+        <div class="cm-pane__head">
+          <h3>Study overview</h3>
+          <p class="cm-pane__hint">Reference-only snapshot of this study.</p>
+        </div>
+        <div class="cm-pane__scroll overview-scroll">
+          <dl class="cm-study-meta">
+            <div>
+              <dt>Status</dt>
+              <dd data-study-status-label><%= statusLabel %></dd>
+            </div>
+            <div>
+              <dt>Participants</dt>
+              <dd><%= participants %></dd>
+            </div>
+            <div>
+              <dt>Join code</dt>
+              <dd><%= study?.joinCode || '—' %></dd>
+            </div>
+            <div>
+              <dt>Owner</dt>
+              <dd><%= owner?.name || 'Research team' %></dd>
+            </div>
+            <div>
+              <dt>Institution</dt>
+              <dd><%= owner?.institution || 'Independent' %></dd>
+            </div>
+            <div>
+              <dt>Version</dt>
+              <dd>
+                <%= versionLabel %>
+                <% if (updatedLabel) { %>
+                  · Updated <%= updatedLabel %>
+                <% } %>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="cm-pane__section">
+            <h4>Why run this study?</h4>
+            <p><%= why %></p>
+          </div>
+          <div class="cm-pane__section">
+            <h4>Time &amp; effort</h4>
+            <p><%= effortText %></p>
+          </div>
+          <div class="cm-pane__section">
+            <h4>Retention</h4>
+            <p><%= retentionText %></p>
+          </div>
+          <div class="cm-pane__section">
+            <h4>Risks</h4>
+            <p><%= risksText %></p>
+          </div>
+
+          <% if (tagList.length) { %>
+            <div class="cm-pane__section">
+              <h4>Tags</h4>
+              <div class="cm-tag-cloud">
+                <% tagList.forEach(function (tag) { %>
+                  <span class="cm-chip"><%= tag %></span>
+                <% }); %>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

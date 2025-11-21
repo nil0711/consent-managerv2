@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "perm-activity-001",
+    "label": "Innovative contextually-based matrix",
+    "category": "activity",
+    "description": "Toties voluptate tego terga curriculum adnuo considero defluo solus accommodo.",
+    "required": false
+  },
+  {
+    "id": "perm-health-002",
+    "label": "Persevering interactive array",
+    "category": "health",
+    "description": "Suspendo tabgo tum terreo abeo colo caveo comes.",
+    "required": false
+  },
+  {
+    "id": "perm-location-003",
+    "label": "Networked holistic array",
+    "category": "location",
+    "description": "Eius communis agnitio tenus cultellus coniecto conscendo tollo.",
+    "required": true
+  },
+  {
+    "id": "perm-survey-004",
+    "label": "Polarised zero defect pricing structure",
+    "category": "survey",
+    "description": "Nihil accendo cicuta strenuus apud.",
+    "required": true
+  },
+  {
+    "id": "perm-device-005",
+    "label": "Progressive exuding instruction set",
+    "category": "device",
+    "description": "Tot urbs animi caterva tepesco tenus decens cetera.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-006",
+    "label": "Distributed client-driven contingency",
+    "category": "communication",
+    "description": "Voluptatibus excepturi careo blanditiis cicuta ipsa nisi vulgo aegre.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-007",
+    "label": "Enhanced human-resource definition",
+    "category": "financial",
+    "description": "Itaque caelestis blanditiis confido aequitas vesco.",
+    "required": true
+  },
+  {
+    "id": "perm-education-008",
+    "label": "Realigned clear-thinking knowledge base",
+    "category": "education",
+    "description": "Crepusculum canto error consectetur nesciunt usque quibusdam turbo.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-009",
+    "label": "Decentralized radical capability",
+    "category": "demographic",
+    "description": "Condico vulnus amissio.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-010",
+    "label": "AI-driven demand-driven throughput",
+    "category": "experimental",
+    "description": "Curriculum astrum vivo viriliter vorago.",
+    "required": true
+  },
+  {
+    "id": "perm-transport-011",
+    "label": "Persistent full-range productivity",
+    "category": "transport",
+    "description": "Studio desparatus tonsor facilis dignissimos tempus cura excepturi curriculum.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-012",
+    "label": "Versatile AI-powered contingency",
+    "category": "nutrition",
+    "description": "Admiratio molestias acquiro vulgo.",
+    "required": true
+  },
+  {
+    "id": "perm-mental-health-013",
+    "label": "Advanced asymmetric monitoring",
+    "category": "mental-health",
+    "description": "Contego confido molestiae accommodo.",
+    "required": true
+  },
+  {
+    "id": "perm-sleep-014",
+    "label": "Proactive client-driven system engine",
+    "category": "sleep",
+    "description": "Thema thymbra animadverto urbs cultellus vigilo crustulum.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-015",
+    "label": "Stand-alone stable challenge",
+    "category": "urban-mobility",
+    "description": "Decet angelus uxor aeneus itaque ara calco trepide.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-016",
+    "label": "Extended eco-centric customer loyalty",
+    "category": "activity",
+    "description": "Voluptatum apostolus audax totus dens vomer.",
+    "required": false
+  },
+  {
+    "id": "perm-health-017",
+    "label": "Total reciprocal collaboration",
+    "category": "health",
+    "description": "Vapulus adstringo bardus voluptatum credo velit stella terror crinis.",
+    "required": true
+  },
+  {
+    "id": "perm-location-018",
+    "label": "Customer-focused client-driven solution",
+    "category": "location",
+    "description": "Auditor doloremque tutis tardus tenetur contego vergo labore.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-019",
+    "label": "Focused eco-centric website",
+    "category": "survey",
+    "description": "Tamen degusto texo carus adfero veritas adhaero defero tenax natus.",
+    "required": false
+  },
+  {
+    "id": "perm-device-020",
+    "label": "Digitized coherent data-warehouse",
+    "category": "device",
+    "description": "Commemoro natus bos arcus sufficio decipio decumbo cupiditate trans.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-021",
+    "label": "Distributed explicit benchmark",
+    "category": "communication",
+    "description": "Spoliatio thesaurus theca et stillicidium dicta dignissimos omnis alveus delectus.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-022",
+    "label": "Smart interactive hierarchy",
+    "category": "financial",
+    "description": "Amor terror urbanus tertius aiunt addo.",
+    "required": true
+  },
+  {
+    "id": "perm-education-023",
+    "label": "Smart regional portal",
+    "category": "education",
+    "description": "Ustilo libero cohibeo tondeo admoveo nemo.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-024",
+    "label": "Reactive logistical forecast",
+    "category": "demographic",
+    "description": "Claustrum hic cohaero cribro cauda aegre tristis tepidus verto.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-025",
+    "label": "Optional impactful hardware",
+    "category": "experimental",
+    "description": "Coruscus considero speculum caelum bardus crustulum thymum celebrer.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-026",
+    "label": "Progressive composite attitude",
+    "category": "transport",
+    "description": "Vinculum usque curso architecto copiose cito annus utilis deporto atrocitas.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-027",
+    "label": "Public-key value-added function",
+    "category": "nutrition",
+    "description": "Aptus ater validus credo dens curriculum culpo attollo alius praesentium.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-028",
+    "label": "Horizontal national matrices",
+    "category": "mental-health",
+    "description": "Arto ceno adulescens speciosus spargo tres administratio audax adulatio minima.",
+    "required": true
+  },
+  {
+    "id": "perm-sleep-029",
+    "label": "Focused clear-thinking frame",
+    "category": "sleep",
+    "description": "Carmen corporis bellicus degero anser.",
+    "required": true
+  },
+  {
+    "id": "perm-urban-mobility-030",
+    "label": "Fully-configurable executive artificial intelligence",
+    "category": "urban-mobility",
+    "description": "Attonbitus aduro animadverto angulus celer delego.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-031",
+    "label": "Intuitive neutral hub",
+    "category": "activity",
+    "description": "Vix possimus altus conforto pectus capto.",
+    "required": false
+  },
+  {
+    "id": "perm-health-032",
+    "label": "Open-architected optimal migration",
+    "category": "health",
+    "description": "Vapulus vulgaris comminor cattus cimentarius.",
+    "required": true
+  },
+  {
+    "id": "perm-location-033",
+    "label": "Virtual dynamic leverage",
+    "category": "location",
+    "description": "Thema voluptates vere adsuesco.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-034",
+    "label": "Optional interactive generative AI",
+    "category": "survey",
+    "description": "Statim uxor coniecto acies capto thesaurus aut conduco.",
+    "required": false
+  },
+  {
+    "id": "perm-device-035",
+    "label": "Seamless client-driven implementation",
+    "category": "device",
+    "description": "Capitulus est tracto tunc dolor turpis templum cunabula advenio adnuo.",
+    "required": true
+  },
+  {
+    "id": "perm-communication-036",
+    "label": "Implemented zero administration function",
+    "category": "communication",
+    "description": "Virtus commodo timidus.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-037",
+    "label": "Universal optimal intranet",
+    "category": "financial",
+    "description": "Solus contabesco auditor alioqui testimonium facere chirographum.",
+    "required": true
+  },
+  {
+    "id": "perm-education-038",
+    "label": "Progressive human-resource forecast",
+    "category": "education",
+    "description": "Argentum subiungo tremo torrens decipio cupio capio tribuo.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-039",
+    "label": "User-centric immersive system engine",
+    "category": "demographic",
+    "description": "Colo basium thermae appello.",
+    "required": true
+  },
+  {
+    "id": "perm-experimental-040",
+    "label": "Visionary methodical success",
+    "category": "experimental",
+    "description": "Collum desparatus odio trado derelinquo.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-041",
+    "label": "Fully-configurable content-based knowledge user",
+    "category": "transport",
+    "description": "Substantia sumo nulla terra arto.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-042",
+    "label": "Organized discrete help-desk",
+    "category": "nutrition",
+    "description": "Adduco terra ab necessitatibus illo stella tantum terminatio aedificium ceno.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-043",
+    "label": "Customer-focused logistical instruction set",
+    "category": "mental-health",
+    "description": "Deserunt argentum communis aedificium.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-044",
+    "label": "Visionary scalable moderator",
+    "category": "sleep",
+    "description": "Balbus ex tabesco thesis adinventitias statua cernuus dolore veritatis aegre.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-045",
+    "label": "Digitized eco-centric archive",
+    "category": "urban-mobility",
+    "description": "Confugo depulso vulgivagus usus suus ambulo harum suadeo.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-046",
+    "label": "Reduced needs-based functionalities",
+    "category": "activity",
+    "description": "Deprecator capio deficio.",
+    "required": false
+  },
+  {
+    "id": "perm-health-047",
+    "label": "Automated actuating time-frame",
+    "category": "health",
+    "description": "Aqua antepono concedo suggero.",
+    "required": false
+  },
+  {
+    "id": "perm-location-048",
+    "label": "Advanced maximized database",
+    "category": "location",
+    "description": "Somnus animus villa.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-049",
+    "label": "Automated regional leverage",
+    "category": "survey",
+    "description": "Verto molestiae trans rem adficio aspicio repudiandae.",
+    "required": true
+  },
+  {
+    "id": "perm-device-050",
+    "label": "Sharable next generation approach",
+    "category": "device",
+    "description": "Baiulus denuncio claudeo degero adimpleo ulterius coadunatio.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-051",
+    "label": "Advanced well-modulated forecast",
+    "category": "communication",
+    "description": "Sto avarus tunc.",
+    "required": true
+  },
+  {
+    "id": "perm-financial-052",
+    "label": "Customizable leading edge approach",
+    "category": "financial",
+    "description": "Arbitro aufero cribro arbor appositus.",
+    "required": false
+  },
+  {
+    "id": "perm-education-053",
+    "label": "Diverse eco-centric hub",
+    "category": "education",
+    "description": "Crudelis sumo basium aptus verus tripudio tantillus decumbo timidus.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-054",
+    "label": "Fundamental demand-driven leverage",
+    "category": "demographic",
+    "description": "Spargo possimus thalassinus vulticulus.",
+    "required": true
+  },
+  {
+    "id": "perm-experimental-055",
+    "label": "Face to face actuating time-frame",
+    "category": "experimental",
+    "description": "Volutabrum arbitro ratione officia addo turpis thema.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-056",
+    "label": "Horizontal clear-thinking system engine",
+    "category": "transport",
+    "description": "Calculus absum tamen statua teres unus subiungo.",
+    "required": true
+  },
+  {
+    "id": "perm-nutrition-057",
+    "label": "Immersive logistical knowledge user",
+    "category": "nutrition",
+    "description": "Patrocinor pax stipes canto ambitus.",
+    "required": true
+  },
+  {
+    "id": "perm-mental-health-058",
+    "label": "Business-focused homogeneous core",
+    "category": "mental-health",
+    "description": "Vapulus ultio cerno victus comitatus urbanus vestigium.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-059",
+    "label": "Persevering optimal hardware",
+    "category": "sleep",
+    "description": "Benevolentia consectetur aetas conatus theologus video vobis baiulus vester.",
+    "required": true
+  },
+  {
+    "id": "perm-urban-mobility-060",
+    "label": "Self-enabling eco-centric approach",
+    "category": "urban-mobility",
+    "description": "Vulgivagus tonsor caute.",
+    "required": true
+  },
+  {
+    "id": "perm-activity-061",
+    "label": "Sustainable systemic model",
+    "category": "activity",
+    "description": "Crebro veritatis depulso suus.",
+    "required": true
+  },
+  {
+    "id": "perm-health-062",
+    "label": "Versatile transitional policy",
+    "category": "health",
+    "description": "Statua cribro ventosus.",
+    "required": false
+  },
+  {
+    "id": "perm-location-063",
+    "label": "Extended human-resource protocol",
+    "category": "location",
+    "description": "Tergum deinde valeo unde.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-064",
+    "label": "Optional leading edge array",
+    "category": "survey",
+    "description": "Cunae curiositas sto asperiores amiculum decerno.",
+    "required": true
+  },
+  {
+    "id": "perm-device-065",
+    "label": "Multi-tiered full-range focus group",
+    "category": "device",
+    "description": "Tubineus pauper dedico aurum decerno dolorum assumenda.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-066",
+    "label": "Multi-tiered national forecast",
+    "category": "communication",
+    "description": "Demulceo abeo brevis volubilis crebro crinis tempore tum.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-067",
+    "label": "AI-driven eco-centric system engine",
+    "category": "financial",
+    "description": "Textus attollo adipisci censura ter uredo aperiam fugit.",
+    "required": false
+  },
+  {
+    "id": "perm-education-068",
+    "label": "Team-oriented actuating function",
+    "category": "education",
+    "description": "Contra trado conduco trans occaecati suasoria a eveniet adaugeo omnis.",
+    "required": true
+  },
+  {
+    "id": "perm-demographic-069",
+    "label": "Reduced tertiary moratorium",
+    "category": "demographic",
+    "description": "Quod caelum paulatim.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-070",
+    "label": "Programmable reciprocal flexibility",
+    "category": "experimental",
+    "description": "Tamquam stipes candidus totidem.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-071",
+    "label": "Proactive radical access",
+    "category": "transport",
+    "description": "Barba votum textus.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-072",
+    "label": "Front-line executive system engine",
+    "category": "nutrition",
+    "description": "Aggredior odit uredo quod colligo deporto vulgo.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-073",
+    "label": "Focused intermediate system engine",
+    "category": "mental-health",
+    "description": "Ventosus triumphus nam ocer coaegresco degusto vere deleniti cibus.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-074",
+    "label": "Robust bifurcated archive",
+    "category": "sleep",
+    "description": "Cado cunae condico urbanus porro iste caries utilis creator verecundia.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-075",
+    "label": "AI-driven motivating parallelism",
+    "category": "urban-mobility",
+    "description": "Coniecto beneficium virga.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-076",
+    "label": "Front-line needs-based collaboration",
+    "category": "activity",
+    "description": "Clementia adimpleo crinis videlicet volup adeptio deinde comprehendo.",
+    "required": false
+  },
+  {
+    "id": "perm-health-077",
+    "label": "Fully-configurable maximized concept",
+    "category": "health",
+    "description": "Armarium doloribus defendo iusto tunc.",
+    "required": false
+  },
+  {
+    "id": "perm-location-078",
+    "label": "Operative zero defect attitude",
+    "category": "location",
+    "description": "Sordeo tener summisse officiis titulus patria suus.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-079",
+    "label": "Persistent stable local area network",
+    "category": "survey",
+    "description": "Coma aegrotatio defetiscor sto alveus.",
+    "required": true
+  },
+  {
+    "id": "perm-device-080",
+    "label": "Streamlined local protocol",
+    "category": "device",
+    "description": "Sed artificiose animi vaco aureus aeternus celer deripio.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-081",
+    "label": "Decentralized uniform forecast",
+    "category": "communication",
+    "description": "Vetus spectaculum adipiscor.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-082",
+    "label": "Synchronised neutral workforce",
+    "category": "financial",
+    "description": "Eius reiciendis auctor nihil sulum qui comes conservo caelestis.",
+    "required": false
+  },
+  {
+    "id": "perm-education-083",
+    "label": "Sharable 24 hour definition",
+    "category": "education",
+    "description": "Vito solium temporibus vester amitto defessus curis magni.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-084",
+    "label": "Decentralized neutral capacity",
+    "category": "demographic",
+    "description": "Cubicularis certus amplus coniecto apto.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-085",
+    "label": "Seamless sustainable functionalities",
+    "category": "experimental",
+    "description": "Delibero desparatus calculus adulescens.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-086",
+    "label": "Reactive static moderator",
+    "category": "transport",
+    "description": "Cito ago agnitio totidem consequuntur cupiditas.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-087",
+    "label": "AI-driven zero trust task-force",
+    "category": "nutrition",
+    "description": "Administratio uberrime debilito aureus delectus tametsi depromo.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-088",
+    "label": "Reactive systematic toolset",
+    "category": "mental-health",
+    "description": "Acquiro commodo celer arcus comparo aduro benevolentia expedita.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-089",
+    "label": "Secured demand-driven alliance",
+    "category": "sleep",
+    "description": "Thymbra solum sapiente sub suadeo soluta vicissitudo cervus ex.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-090",
+    "label": "Extended uniform neural-net",
+    "category": "urban-mobility",
+    "description": "Corrumpo unde clamo alienus tum demergo certus.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-091",
+    "label": "Exclusive intermediate intranet",
+    "category": "activity",
+    "description": "Deludo utroque clam vomica currus eos.",
+    "required": false
+  },
+  {
+    "id": "perm-health-092",
+    "label": "Triple-buffered neutral structure",
+    "category": "health",
+    "description": "Modi thesis pauper ara virga aliquam totidem.",
+    "required": false
+  },
+  {
+    "id": "perm-location-093",
+    "label": "Balanced contextually-based core",
+    "category": "location",
+    "description": "Adulatio tripudio appello exercitationem.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-094",
+    "label": "Enhanced value-added process improvement",
+    "category": "survey",
+    "description": "Allatus sunt tabernus summa curriculum.",
+    "required": false
+  },
+  {
+    "id": "perm-device-095",
+    "label": "Ergonomic contextually-based forecast",
+    "category": "device",
+    "description": "Temporibus communis ait advoco molestias.",
+    "required": true
+  },
+  {
+    "id": "perm-communication-096",
+    "label": "Triple-buffered tertiary structure",
+    "category": "communication",
+    "description": "Inventore credo volaticus auxilium venustas denique audentia pauper candidus.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-097",
+    "label": "Seamless global adapter",
+    "category": "financial",
+    "description": "Admitto creator apparatus acer sonitus defendo reiciendis demo patior animi.",
+    "required": true
+  },
+  {
+    "id": "perm-education-098",
+    "label": "Reactive human-resource interface",
+    "category": "education",
+    "description": "Deprecator tristis spoliatio complectus.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-099",
+    "label": "Distributed fresh-thinking utilisation",
+    "category": "demographic",
+    "description": "Aer pax trans.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-100",
+    "label": "Reduced mission-critical synergy",
+    "category": "experimental",
+    "description": "Vinculum vesica cubitum curo cubitum curia corporis placeat comminor.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-101",
+    "label": "Enhanced uniform migration",
+    "category": "transport",
+    "description": "Aspicio quisquam tertius minus thymum acerbitas adsum decretum tamquam tabella.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-102",
+    "label": "Fully-configurable methodical orchestration",
+    "category": "nutrition",
+    "description": "Patrocinor videlicet complectus cohibeo amplus bestia adinventitias adinventitias.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-103",
+    "label": "Advanced explicit protocol",
+    "category": "mental-health",
+    "description": "Taceo cado crebro ager vesco cibus denego.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-104",
+    "label": "Fully-configurable explicit data-warehouse",
+    "category": "sleep",
+    "description": "Triumphus demo architecto thermae alioqui bellicus via.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-105",
+    "label": "Ergonomic holistic open architecture",
+    "category": "urban-mobility",
+    "description": "Allatus absorbeo contigo.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-106",
+    "label": "Persistent zero trust service-desk",
+    "category": "activity",
+    "description": "Ver occaecati averto delicate utroque adficio apparatus.",
+    "required": false
+  },
+  {
+    "id": "perm-health-107",
+    "label": "Universal responsive solution",
+    "category": "health",
+    "description": "Bis copiose adnuo pecco vulgaris.",
+    "required": false
+  },
+  {
+    "id": "perm-location-108",
+    "label": "Expanded systemic support",
+    "category": "location",
+    "description": "Voluntarius vis facilis cumque crustulum.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-109",
+    "label": "Proactive optimal task-force",
+    "category": "survey",
+    "description": "Ocer bellum adficio tardus autem numquam cibo apostolus decipio pauci.",
+    "required": false
+  },
+  {
+    "id": "perm-device-110",
+    "label": "Managed uniform archive",
+    "category": "device",
+    "description": "Taedium dolorem vacuus cerno acer.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-111",
+    "label": "Customer-focused interactive neural-net",
+    "category": "communication",
+    "description": "Stultus coepi aliqua sophismata ulterius varius tergum.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-112",
+    "label": "Public-key encompassing workforce",
+    "category": "financial",
+    "description": "Verecundia vulnero taedium tero argumentum stips ipsa vae deduco.",
+    "required": false
+  },
+  {
+    "id": "perm-education-113",
+    "label": "Ergonomic demand-driven challenge",
+    "category": "education",
+    "description": "Aetas soluta ultra adimpleo tenax sunt.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-114",
+    "label": "Quality-focused disintermediate frame",
+    "category": "demographic",
+    "description": "Thesis defaeco utrimque attero uredo varius labore bellum.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-115",
+    "label": "Diverse impactful system engine",
+    "category": "experimental",
+    "description": "Arguo alveus earum.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-116",
+    "label": "Enhanced system-worthy collaboration",
+    "category": "transport",
+    "description": "Volutabrum magnam quidem pauper tot.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-117",
+    "label": "Optional composite functionalities",
+    "category": "nutrition",
+    "description": "Commemoro tui vero.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-118",
+    "label": "Devolved neutral firmware",
+    "category": "mental-health",
+    "description": "Conservo cinis conatus vapulus.",
+    "required": true
+  },
+  {
+    "id": "perm-sleep-119",
+    "label": "Focused national knowledge user",
+    "category": "sleep",
+    "description": "Teneo ventosus commodi tumultus.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-120",
+    "label": "Extended client-driven website",
+    "category": "urban-mobility",
+    "description": "At conicio sulum ea.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-121",
+    "label": "Decentralized tertiary protocol",
+    "category": "activity",
+    "description": "Adulatio canto sono conforto coadunatio.",
+    "required": false
+  },
+  {
+    "id": "perm-health-122",
+    "label": "Extended composite microservice",
+    "category": "health",
+    "description": "Confido bestia fuga aufero.",
+    "required": false
+  },
+  {
+    "id": "perm-location-123",
+    "label": "Devolved clear-thinking system engine",
+    "category": "location",
+    "description": "Bis aut ancilla corporis consequuntur varius vado sonitus.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-124",
+    "label": "Synchronised disintermediate product",
+    "category": "survey",
+    "description": "Agnitio laboriosam coaegresco accedo comitatus barba valetudo.",
+    "required": false
+  },
+  {
+    "id": "perm-device-125",
+    "label": "Seamless coherent paradigm",
+    "category": "device",
+    "description": "Acidus illo curo ustulo temeritas molestias cognatus ab abscido sui.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-126",
+    "label": "Advanced responsive model",
+    "category": "communication",
+    "description": "Velit aggero validus delectatio vix turbo dens vilitas.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-127",
+    "label": "Stand-alone regional strategy",
+    "category": "financial",
+    "description": "Omnis animi eius tremo laboriosam aro.",
+    "required": false
+  },
+  {
+    "id": "perm-education-128",
+    "label": "Compatible composite matrix",
+    "category": "education",
+    "description": "Somnus unde caecus adeptio somniculosus defungo demonstro.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-129",
+    "label": "Streamlined uniform internet solution",
+    "category": "demographic",
+    "description": "Alo tametsi aegrus candidus laborum uterque aliqua colo.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-130",
+    "label": "User-friendly high-level algorithm",
+    "category": "experimental",
+    "description": "Avaritia circumvenio patior adhaero templum cura.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-131",
+    "label": "Stand-alone national attitude",
+    "category": "transport",
+    "description": "Velum thema acidus tardus eaque.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-132",
+    "label": "Digitized optimal system engine",
+    "category": "nutrition",
+    "description": "Esse tendo vulgaris eveniet censura repellat tepesco.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-133",
+    "label": "User-centric systematic matrix",
+    "category": "mental-health",
+    "description": "Nesciunt nemo laborum ullus censura culpo bis ubi arguo assentator.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-134",
+    "label": "Reduced holistic neural-net",
+    "category": "sleep",
+    "description": "Comes tabgo acerbitas dignissimos ait voro.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-135",
+    "label": "Distributed local hardware",
+    "category": "urban-mobility",
+    "description": "Natus pauci magnam vereor adnuo vitium corporis summisse cruentus.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-136",
+    "label": "Future-proofed explicit generative AI",
+    "category": "activity",
+    "description": "Aperio aqua inflammatio.",
+    "required": false
+  },
+  {
+    "id": "perm-health-137",
+    "label": "Exclusive responsive hierarchy",
+    "category": "health",
+    "description": "Corporis nulla valetudo decet perferendis vinco tempore sui distinctio.",
+    "required": false
+  },
+  {
+    "id": "perm-location-138",
+    "label": "Integrated mission-critical installation",
+    "category": "location",
+    "description": "Balbus termes solutio vae.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-139",
+    "label": "Multi-tiered asymmetric implementation",
+    "category": "survey",
+    "description": "Fugit utrimque corpus talus aggredior pariatur bonus.",
+    "required": true
+  },
+  {
+    "id": "perm-device-140",
+    "label": "Self-enabling sustainable artificial intelligence",
+    "category": "device",
+    "description": "Distinctio spoliatio adfectus.",
+    "required": true
+  },
+  {
+    "id": "perm-communication-141",
+    "label": "Business-focused cloud-native capability",
+    "category": "communication",
+    "description": "Cornu turpis ulterius angelus argumentum cras vigilo.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-142",
+    "label": "Configurable homogeneous adapter",
+    "category": "financial",
+    "description": "Curatio concedo artificiose vereor turba.",
+    "required": false
+  },
+  {
+    "id": "perm-education-143",
+    "label": "Future-proofed empowering contingency",
+    "category": "education",
+    "description": "Volutabrum acidus antea numquam summisse tergeo non virgo sum.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-144",
+    "label": "User-friendly scalable website",
+    "category": "demographic",
+    "description": "Acies statua carus sono socius admoneo harum.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-145",
+    "label": "Organic high-level model",
+    "category": "experimental",
+    "description": "Esse ustulo ait appello ustilo acquiro.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-146",
+    "label": "Total global structure",
+    "category": "transport",
+    "description": "Vestrum substantia thesis terra pax suasoria.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-147",
+    "label": "Cross-platform leading edge time-frame",
+    "category": "nutrition",
+    "description": "Auctus adsum dens cibus.",
+    "required": true
+  },
+  {
+    "id": "perm-mental-health-148",
+    "label": "Optional homogeneous knowledge user",
+    "category": "mental-health",
+    "description": "Crebro sollicito claudeo.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-149",
+    "label": "Future-proofed tangible success",
+    "category": "sleep",
+    "description": "Aveho tredecim voluptatum utor aestas paens vilicus sint usque officiis.",
+    "required": true
+  },
+  {
+    "id": "perm-urban-mobility-150",
+    "label": "Open-source high-level algorithm",
+    "category": "urban-mobility",
+    "description": "Admitto textus comparo urbanus delego civitas expedita.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-151",
+    "label": "Sharable logistical leverage",
+    "category": "activity",
+    "description": "Charisma asporto ratione eius facilis consequatur fugit pecco.",
+    "required": false
+  },
+  {
+    "id": "perm-health-152",
+    "label": "Robust AI-powered function",
+    "category": "health",
+    "description": "Comedo aiunt addo cunctatio.",
+    "required": false
+  },
+  {
+    "id": "perm-location-153",
+    "label": "Sharable context-sensitive frame",
+    "category": "location",
+    "description": "Thesis unus contigo asper caecus totidem vulgo vomito recusandae explicabo.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-154",
+    "label": "Ergonomic analyzing hub",
+    "category": "survey",
+    "description": "Ipsa crux tero quam ventosus cervus in voluptatem caelestis ulterius.",
+    "required": false
+  },
+  {
+    "id": "perm-device-155",
+    "label": "Optimized sustainable microservice",
+    "category": "device",
+    "description": "Coepi aqua ascisco deprimo vorago magnam.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-156",
+    "label": "Managed hybrid synergy",
+    "category": "communication",
+    "description": "Ante cernuus ater cursus rem solvo a canis.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-157",
+    "label": "Networked holistic conglomeration",
+    "category": "financial",
+    "description": "Subnecto acervus vorax comburo audacia audacia dolore sophismata volutabrum aduro.",
+    "required": false
+  },
+  {
+    "id": "perm-education-158",
+    "label": "Immersive exuding encoding",
+    "category": "education",
+    "description": "Demo valetudo quae curvo annus.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-159",
+    "label": "Sustainable methodical access",
+    "category": "demographic",
+    "description": "Ago depopulo totam utroque virga soleo patruus victus.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-160",
+    "label": "Sharable analyzing help-desk",
+    "category": "experimental",
+    "description": "Vinco ex blandior degenero tredecim tabella corroboro arca aequus tempus.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-161",
+    "label": "Business-focused dedicated interface",
+    "category": "transport",
+    "description": "Quo triduana vae adulatio cohibeo.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-162",
+    "label": "Distributed analyzing synergy",
+    "category": "nutrition",
+    "description": "Coepi vulgus carus astrum ventito uberrime demonstro ea defleo artificiose.",
+    "required": true
+  },
+  {
+    "id": "perm-mental-health-163",
+    "label": "Customizable neutral portal",
+    "category": "mental-health",
+    "description": "Curiositas cupressus asperiores arbor cohors vita.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-164",
+    "label": "Profit-focused immersive circuit",
+    "category": "sleep",
+    "description": "Temporibus trepide avarus confero adsum torqueo.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-165",
+    "label": "Public-key coherent capacity",
+    "category": "urban-mobility",
+    "description": "Crastinus tabernus comparo denuo nam colo modi bis.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-166",
+    "label": "Profound real-time orchestration",
+    "category": "activity",
+    "description": "Abundans coma vacuus.",
+    "required": false
+  },
+  {
+    "id": "perm-health-167",
+    "label": "Innovative dynamic infrastructure",
+    "category": "health",
+    "description": "Arca cotidie volutabrum comminor error.",
+    "required": false
+  },
+  {
+    "id": "perm-location-168",
+    "label": "Stand-alone AI-powered neural-net",
+    "category": "location",
+    "description": "Turbo quam nesciunt.",
+    "required": true
+  },
+  {
+    "id": "perm-survey-169",
+    "label": "Distributed optimizing challenge",
+    "category": "survey",
+    "description": "Voco illum tersus approbo trepide theatrum maiores ipsam ducimus demens.",
+    "required": false
+  },
+  {
+    "id": "perm-device-170",
+    "label": "Implemented asynchronous access",
+    "category": "device",
+    "description": "Quos vespillo alioqui id.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-171",
+    "label": "Quality-focused national algorithm",
+    "category": "communication",
+    "description": "Alter credo vobis ante comprehendo bibo subvenio tabula soleo doloribus.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-172",
+    "label": "Compatible zero tolerance functionalities",
+    "category": "financial",
+    "description": "Peccatus ara tubineus vesco vicinus blanditiis adduco deprecator suggero ars.",
+    "required": false
+  },
+  {
+    "id": "perm-education-173",
+    "label": "Reverse-engineered real-time attitude",
+    "category": "education",
+    "description": "Defessus summisse coaegresco voco aqua aspernatur sollers.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-174",
+    "label": "Seamless impactful conglomeration",
+    "category": "demographic",
+    "description": "Sint temptatio advenio.",
+    "required": false
+  },
+  {
+    "id": "perm-experimental-175",
+    "label": "Fully-configurable hybrid utilisation",
+    "category": "experimental",
+    "description": "Laboriosam officia ait utpote acer argumentum textilis coruscus sortitus reprehenderit.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-176",
+    "label": "Managed tertiary application",
+    "category": "transport",
+    "description": "Vinco cogito demoror eaque verecundia cilicium copiose utpote urbs.",
+    "required": false
+  },
+  {
+    "id": "perm-nutrition-177",
+    "label": "Quality-focused transitional complexity",
+    "category": "nutrition",
+    "description": "Volutabrum eveniet combibo illum fugit victus anser voluntarius cum.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-178",
+    "label": "Synchronised holistic approach",
+    "category": "mental-health",
+    "description": "Curvo compono laboriosam antiquus volubilis.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-179",
+    "label": "Smart impactful hub",
+    "category": "sleep",
+    "description": "Suffoco abbas coerceo voluptatum aeneus censura eius.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-180",
+    "label": "Intuitive maximized task-force",
+    "category": "urban-mobility",
+    "description": "Vulnus crapula vix deinde cogo turpis.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-181",
+    "label": "Upgradable composite time-frame",
+    "category": "activity",
+    "description": "Terebro arto victoria ventus utor constans clarus ager canis.",
+    "required": true
+  },
+  {
+    "id": "perm-health-182",
+    "label": "Sharable encompassing process improvement",
+    "category": "health",
+    "description": "Quos assumenda reiciendis urbanus.",
+    "required": false
+  },
+  {
+    "id": "perm-location-183",
+    "label": "Polarised 24/7 toolset",
+    "category": "location",
+    "description": "Cresco decipio ab atavus terra saepe.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-184",
+    "label": "Extended asymmetric capacity",
+    "category": "survey",
+    "description": "Patruus viridis deripio autem sustineo super quas.",
+    "required": true
+  },
+  {
+    "id": "perm-device-185",
+    "label": "Programmable system-worthy methodology",
+    "category": "device",
+    "description": "Corona arcus at ceno creator.",
+    "required": false
+  },
+  {
+    "id": "perm-communication-186",
+    "label": "Smart discrete microservice",
+    "category": "communication",
+    "description": "Administratio debeo antiquus traho error demum vaco adnuo.",
+    "required": false
+  },
+  {
+    "id": "perm-financial-187",
+    "label": "Centralized global implementation",
+    "category": "financial",
+    "description": "Succedo creber rerum laboriosam tersus adopto thesis.",
+    "required": false
+  },
+  {
+    "id": "perm-education-188",
+    "label": "Cross-platform reciprocal paradigm",
+    "category": "education",
+    "description": "Antiquus aut arcesso.",
+    "required": false
+  },
+  {
+    "id": "perm-demographic-189",
+    "label": "Customer-focused intermediate framework",
+    "category": "demographic",
+    "description": "Deleo absconditus currus suadeo consuasor quod.",
+    "required": true
+  },
+  {
+    "id": "perm-experimental-190",
+    "label": "Integrated coherent knowledge base",
+    "category": "experimental",
+    "description": "Tabula taedium desidero.",
+    "required": false
+  },
+  {
+    "id": "perm-transport-191",
+    "label": "Reverse-engineered composite definition",
+    "category": "transport",
+    "description": "Illo cariosus desparatus bellum aggero adeptio solium subnecto vulnus.",
+    "required": true
+  },
+  {
+    "id": "perm-nutrition-192",
+    "label": "Optimized intermediate policy",
+    "category": "nutrition",
+    "description": "Amplitudo causa accusantium antea basium culpo dolorum subiungo.",
+    "required": false
+  },
+  {
+    "id": "perm-mental-health-193",
+    "label": "Compatible exuding array",
+    "category": "mental-health",
+    "description": "Demoror carbo cena demo victoria avaritia compello pectus.",
+    "required": false
+  },
+  {
+    "id": "perm-sleep-194",
+    "label": "Profit-focused reciprocal functionalities",
+    "category": "sleep",
+    "description": "Sulum nulla quam tergiversatio deprimo sortitus bene villa officia.",
+    "required": false
+  },
+  {
+    "id": "perm-urban-mobility-195",
+    "label": "Adaptive context-sensitive complexity",
+    "category": "urban-mobility",
+    "description": "Tempore suasoria ipsam conor asper dolor angelus arceo vicissitudo votum.",
+    "required": false
+  },
+  {
+    "id": "perm-activity-196",
+    "label": "Reverse-engineered mission-critical definition",
+    "category": "activity",
+    "description": "Auctus defluo aestus denuncio vereor dens causa comis calcar volaticus.",
+    "required": false
+  },
+  {
+    "id": "perm-health-197",
+    "label": "Optimized client-driven model",
+    "category": "health",
+    "description": "Porro vereor iure quibusdam adulescens depromo.",
+    "required": false
+  },
+  {
+    "id": "perm-location-198",
+    "label": "Robust high-level model",
+    "category": "location",
+    "description": "Aiunt adiuvo defetiscor tot compono iusto.",
+    "required": false
+  },
+  {
+    "id": "perm-survey-199",
+    "label": "Managed explicit concept",
+    "category": "survey",
+    "description": "Conqueror advenio deficio dignissimos reprehenderit aptus tero cibo villa aptus.",
+    "required": false
+  },
+  {
+    "id": "perm-device-200",
+    "label": "Fully-configurable explicit instruction set",
+    "category": "device",
+    "description": "Aliqua vilicus veritas.",
+    "required": false
+  }
+]

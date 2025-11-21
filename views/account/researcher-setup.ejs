@@ -1,0 +1,34 @@
+<main class="cm-page">
+  <div class="cm-topbar">
+    <a class="cm-pill cm-pill--home" href="/participant">Home</a>
+  </div>
+
+  <div class="cm-wrap">
+    <% if (error) { %>
+      <div class="cm-card" style="margin-bottom:16px; border:1px solid rgba(255,82,82,.35); color:#ff8b8b;">
+        <strong>Error:</strong> <%= error %>
+      </div>
+    <% } %>
+
+    <section class="cm-card">
+      <div class="cm-h">Set up Researcher</div>
+      <p>Share a display name for your researcher profile to begin creating studies.</p>
+
+      <form method="post" action="/account/roles/researcher/setup">
+        <label>Display name</label>
+        <input class="cm-field" name="displayName" value="<%= form?.displayName || '' %>" required>
+
+        <div style="height:10px"></div>
+        <label>Affiliation (optional)</label>
+        <input class="cm-field" name="affiliation" value="<%= form?.affiliation || '' %>">
+
+        <div style="height:10px"></div>
+        <label>Contact email (optional)</label>
+        <input class="cm-field" name="contactEmail" type="email" autocomplete="email" value="<%= form?.contactEmail || '' %>">
+
+        <div style="height:14px"></div>
+        <button class="cm-btn cm-btn--primary" type="submit">Create profile</button>
+      </form>
+    </section>
+  </div>
+</main>

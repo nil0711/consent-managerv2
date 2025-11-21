@@ -1,0 +1,109 @@
+<%- include('partials/dash-header') %>
+
+<main class="dash-shell researcher">
+  <div class="dash-grid cm-dash-grid">
+    <section class="dash-stack" id="dashStack">
+      <article class="dash-card dash-card--ongoing studies-card cm-card cm-pane cm-pane--studies rs-studies rs-card" id="ongoingCard">
+        <header class="dash-card-head cm-pane__head rs-studies__head">
+          <h2>Studies</h2>
+          <button type="button" class="cm-btn cm-btn--primary" data-act="create-study">Create</button>
+        </header>
+        <% const currentFilters = filters || {}; %>
+        <% const activeTab = (currentFilters.tab || 'all').toLowerCase(); %>
+        <% const searchQuery = currentFilters.q || ''; %>
+        <% const qSuffix = searchQuery ? '&q=' + encodeURIComponent(searchQuery) : ''; %>
+        <div class="dash-card-body cm-pane__scroll cm-pane-body">
+          <div class="cm-pane__subhead">
+            <form class="cm-toolbar" method="get" action="/researcher">
+              <input
+                id="studiesSearch"
+                class="cm-subsearch"
+                type="search"
+                name="q"
+                value="<%= searchQuery %>"
+                placeholder="Search my studies"
+                autocomplete="off"
+                enterkeyhint="search"
+                data-studies-search>
+              <input type="hidden" name="tab" value="<%= activeTab %>">
+            </form>
+            <div class="cm-chips">
+              <a class="chip <%= activeTab === 'all' ? 'is-active' : '' %>" href="<%= searchQuery ? `/researcher?q=${encodeURIComponent(searchQuery)}` : '/researcher' %>">All</a>
+              <a class="chip <%= activeTab === 'recruiting' ? 'is-active' : '' %>" href="/researcher?tab=recruiting<%- qSuffix %>">Recruiting</a>
+              <a class="chip <%= activeTab === 'ongoing' ? 'is-active' : '' %>" href="/researcher?tab=ongoing<%- qSuffix %>">Ongoing</a>
+              <a class="chip <%= activeTab === 'completed' ? 'is-active' : '' %>" href="/researcher?tab=completed<%- qSuffix %>">Completed</a>
+              <a class="chip <%= activeTab === 'archived' ? 'is-active' : '' %>" href="/researcher?tab=archived<%- qSuffix %>">Archived</a>
+            </div>
+          </div>
+          <div class="studies-list" id="ongoingList" data-studies-container>
+            <% const studiesList = Array.isArray(studies) ? studies : []; %>
+            <% if (studiesList.length) { %>
+              <ul class="dash-list" data-studies-list>
+                <% studiesList.forEach(function(item) { %>
+                  <li class="dash-list-item cm-row cm-study-card"
+                    data-study-id="<%= item.id %>"
+                    data-researcher-card="<%= item.id %>"
+                    data-status="<%= (item.status || '').toLowerCase() %>"
+                    data-title="<%= item.title %>"
+                    data-tags="<%= (item.tags || []).join(',') %>"
+                    data-summary="<%= item.summary || '' %>"
+                    data-code="<%= item.code || '' %>"
+                    data-study-row>
+                    <div class="dash-list-main">
+                      <div class="dash-list-title cm-title cm-line-clamp-2"><%= item.title %></div>
+                      <% if (item.status) { %>
+                        <div class="dash-list-meta cm-meta">
+                          <span class="status status--<%= item.status.toLowerCase() %>"><%= item.status %></span>
+                          <% if (typeof item.participants !== 'undefined') { %> • <%= item.participants %> participants<% } %>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="dash-list-actions cm-actions">
+                      <button
+                        type="button"
+                        class="cm-btn cm-btn--ghost"
+                        data-cm-view-study
+                        data-view-study-id="<%= item.id %>"
+                        data-study-id="<%= item.id %>">View</button>
+                      <button type="button" class="cm-btn cm-btn--ghost" data-share-code="<%= item.code || '' %>" data-study-title="<%= item.title %>">Share</button>
+                    </div>
+                  </li>
+                <% }); %>
+              </ul>
+            <% } else { %>
+              <p class="dash-empty">No studies yet.</p>
+            <% } %>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="dash-rail">
+      <section class="cm-card cm-pane cm-pane--rail rs-trending rs-card" data-trending-rail>
+        <header class="cm-pane__head">
+          <h2 class="cm-card__title">Trending</h2>
+        </header>
+        <div class="cm-pane__scroll cm-pane-body">
+          <ul class="cm-list">
+            <% if (Array.isArray(trending) && trending.length) { %>
+              <%- include('partials/trending-list', { items: trending }) %>
+            <% } else { %>
+              <li class="cm-row cm-row--empty">
+                <span class="dash-empty">Nothing trending yet.</span>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<%- include('partials/search-lite-overlay') %>
+<%- include('partials/confirm') %>
+<div data-study-modal-host></div>
+<div class="cm-toast-stack" id="toast-root" aria-live="polite"></div>
+<script type="module" src="/js/lib/fetch.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>"></script>
+<script src="/js/search-lite.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+<script src="/js/researcher.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+<script src="/js/researcher-study.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>

@@ -1,0 +1,69 @@
+<%
+  bodyClass = "docs-shell";
+  pageId = "docs-consent";
+  pageKind = "docs";
+%>
+
+<section class="docs-container">
+  <%- include('partials/brand-pill') %>
+
+  <header class="docs-header">
+    <div class="docs-badge">Consent rules</div>
+    <h1 class="docs-title">Consent rules &amp; FAQ</h1>
+    <p class="docs-lead">Understand what data is collected, how it is protected, and how to withdraw or update consent.</p>
+  </header>
+
+  <div class="docs-grid docs-policy">
+    <article class="docs-card">
+      <h3>What data can be collected</h3>
+      <ul>
+        <li>Only the fields explicitly listed in the consent notice.</li>
+        <li>Optional data must be clearly marked and skippable.</li>
+        <li>Sensitive identifiers are encrypted at rest.</li>
+      </ul>
+    </article>
+    <article class="docs-card">
+      <h3>Who can view your data</h3>
+      <ul>
+        <li>Study owners and approved collaborators.</li>
+        <li>Admins see metadata, never raw submissions.</li>
+        <li>Participants can always see their own history.</li>
+      </ul>
+    </article>
+    <article class="docs-card">
+      <h3>How long we keep it</h3>
+      <ul>
+        <li>Retention follows the study settings (default 24 months).</li>
+        <li>Withdrawn consent triggers scheduled deletion.</li>
+        <li>Analytics are kept only as anonymised aggregates.</li>
+      </ul>
+    </article>
+  </div>
+
+  <section class="docs-card docs-faq">
+    <h2 class="docs-section-title">Frequently asked questions</h2>
+    <div class="docs-faq-list">
+      <article class="docs-faq-item">
+        <h3>Can I withdraw consent?</h3>
+        <p>Yes. Unless a study is flagged <em>locked after submission</em>, you can revoke consent from your dashboard at any time.</p>
+      </article>
+      <article class="docs-faq-item">
+        <h3>Do I need a study code?</h3>
+        <p>Private studies require the code provided by the researcher. Public studies can be joined directly from the invite link.</p>
+      </article>
+      <article class="docs-faq-item">
+        <h3>Can I use the same email for both roles?</h3>
+        <p>Absolutely. Accounts can switch between participant and researcher functions without logging out.</p>
+      </article>
+      <article class="docs-faq-item">
+        <h3>Where do I see my consents?</h3>
+        <p>Open the participant dashboard and select <strong>My consents</strong> to view, download, or revoke any record.</p>
+      </article>
+      <article class="docs-faq-item">
+        <h3>Who do I contact for help?</h3>
+        <p>Reach out to the study owner listed in your consent notice or your institution’s research administrator.</p>
+      </article>
+    </div>
+    <a class="docs-link" href="/login">Back to login ↗</a>
+  </section>
+</section>

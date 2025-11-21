@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Consent Document Verification</title>
+    <style>
+      body {
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        border-radius: 16px;
+        padding: 32px 36px;
+        max-width: 520px;
+        box-shadow: 0 24px 60px rgba(2, 6, 23, 0.6);
+      }
+      h1 { margin: 0 0 12px; font-size: 24px; }
+      p { margin: 8px 0; line-height: 1.6; }
+      .hash { font-family: "Roboto Mono", monospace; font-size: 14px; word-break: break-all; color: #38bdf8; margin-top: 12px; }
+      .status { margin-top: 18px; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Consent Document Verification</h1>
+      <% if (issued) { %>
+        <p>The document was issued by this server. Keep this ID for your records:</p>
+        <div class="hash"><%= hash %></div>
+        <p class="status">Status: Verified</p>
+      <% } else { %>
+        <p>We couldn’t verify this document hash.</p>
+        <p class="status">Status: Unknown</p>
+      <% } %>
+      <p style="margin-top:18px;font-size:12px;color:#cbd5f5;">
+        For additional assistance, contact the research team listed on your consent summary.
+      </p>
+    </div>
+  </body>
+</html>

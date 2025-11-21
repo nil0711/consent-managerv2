@@ -1,0 +1,84 @@
+<%
+  const roleLabel = user && user.role === 'RESEARCHER' ? 'Researcher' : 'Participant';
+  const hideTopSearch =
+    typeof hideSearch !== 'undefined'
+      ? hideSearch
+      : (typeof locals !== 'undefined' && typeof locals.hideSearch !== 'undefined'
+          ? locals.hideSearch
+          : false);
+%>
+
+<header class="dash-header">
+  <div class="cm-brand">
+    <div class="cm-brand-main">CONSENT MANAGER</div>
+    <div class="cm-brand-sub">research consent, simplified</div>
+  </div>
+
+  <div class="dash-top">
+    <% if (!hideTopSearch) { %>
+      <form class="dash-search" role="search" action="/search" method="GET" onsubmit="return false">
+        <input type="search" name="q" placeholder="Search" autocomplete="off" aria-label="Search" data-global-search-input>
+        <button class="icon-btn" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 4a7 7 0 0 1 5.523 11.288l3.594 3.595-1.414 1.414-3.595-3.594A7 7 0 1 1 11 4Zm0 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10Z"/></svg>
+        </button>
+      </form>
+    <% } %>
+
+    <span class="cm-role-badge"><%= roleLabel %></span>
+    <%
+      const roleState = (typeof profileState !== 'undefined' && profileState) ? profileState : (locals.profileState || { participant:false, researcher:false });
+      const grantedRoles = Array.isArray(user.roles) ? user.roles : [];
+      const hasParticipant = roleState.participant || grantedRoles.includes('PARTICIPANT');
+      const hasResearcher = roleState.researcher || grantedRoles.includes('RESEARCHER');
+      const initialChar = ((user && user.name) || user?.email || "?").trim().charAt(0).toUpperCase();
+    %>
+    <div class="cm-avatar-menu">
+      <button id="cm-avatar-btn" class="cm-avatar-btn" aria-haspopup="true" aria-expanded="false" type="button">
+        <span class="cm-avatar-char"><%= initialChar %></span>
+      </button>
+      <div id="cm-menu" class="cm-menu" hidden>
+        <ul class="cm-menu__list">
+          <li>
+            <a class="cm-menu__item" href="/account"><span>Profile</span></a>
+          </li>
+          <li class="cm-menu__sep"></li>
+          <li class="cm-menu__head">Change role</li>
+          <li>
+            <button
+              class="cm-menu__item js-switch-role"
+              type="button"
+              data-role="participant">
+              <span>Participant</span>
+              <% if (user.role === 'PARTICIPANT') { %>
+                <span class="cm-menu__badge">Active</span>
+              <% } else if (!hasParticipant) { %>
+                <span class="cm-menu__badge">Setup</span>
+              <% } %>
+            </button>
+          </li>
+          <li>
+            <button
+              class="cm-menu__item js-switch-role"
+              type="button"
+              data-role="researcher"
+              <%= hasResearcher ? "" : "data-needs-setup" %>>
+              <span>Researcher</span>
+              <% if (user.role === 'RESEARCHER') { %>
+                <span class="cm-menu__badge">Active</span>
+              <% } else if (!hasResearcher) { %>
+                <span class="cm-menu__badge">Setup</span>
+              <% } %>
+            </button>
+          </li>
+          <li class="cm-menu__sep"></li>
+          <li>
+            <a class="cm-menu__item cm-menu__danger" href="/logout">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div id="menuScrim" class="menu-scrim" hidden></div>

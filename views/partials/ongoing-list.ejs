@@ -1,0 +1,24 @@
+<% if (Array.isArray(items) && items.length) { %>
+  <ul class="dash-list">
+    <% items.forEach(function(item) { %>
+      <li class="dash-list-item">
+        <div class="dash-list-main">
+          <div class="dash-list-title"><%= item.title %></div>
+          <% if (item.status) { %>
+            <div class="dash-list-meta">
+              <span class="status status--<%= item.status.toLowerCase() %>"><%= item.status %></span>
+              <% if (item.last) { %> • <%= item.last %><% } %>
+              <% if (typeof item.people !== 'undefined') { %> • <%= item.people %> participants<% } %>
+              <% if (typeof item.cv !== 'undefined') { %> • cv<%= item.cv %><% } %>
+            </div>
+          <% } %>
+        </div>
+        <div class="dash-list-actions">
+          <button type="button" class="chip ghost">View</button>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p class="dash-empty">No studies yet.</p>
+<% } %>

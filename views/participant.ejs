@@ -1,0 +1,127 @@
+<%- include('partials/dash-header') %>
+
+<main class="dash-shell participant">
+  <div class="dash-grid">
+    <section class="dash-stack" id="dashStack">
+      <article class="dash-card dash-card--join join-card" id="joinCard">
+        <header class="dash-card-head">Join a study</header>
+        <div class="dash-card-body">
+          <form class="join-form" onsubmit="return false">
+            <input class="cm-input" data-join-code type="text" placeholder="ENTER CODE (E.G., ABC-12345)" aria-label="Study code">
+            <button type="button" class="cm-btn cm-btn--accent" data-join-btn>Join</button>
+          </form>
+        </div>
+      </article>
+
+      <article class="dash-card dash-card--ongoing studies-card cm-card cm-pane cm-pane--studies" data-studies-pane id="ongoingCard">
+        <header class="dash-card-head cm-pane__head">Studies</header>
+        <% const currentFilters = filters || {}; %>
+        <% const activeTab = (currentFilters.tab || 'all').toLowerCase(); %>
+        <% const searchQuery = currentFilters.q || ''; %>
+        <% const qSuffix = searchQuery ? '&q=' + encodeURIComponent(searchQuery) : ''; %>
+        <div class="dash-card-body cm-pane__scroll">
+          <div class="cm-pane__subhead">
+            <form class="cm-toolbar" method="get" action="/participant">
+              <input
+                id="studiesSearch"
+                class="cm-subsearch"
+                type="search"
+                name="q"
+                value="<%= searchQuery %>"
+                placeholder="Search my studies"
+                autocomplete="off"
+                enterkeyhint="search"
+                data-studies-search>
+              <input type="hidden" name="tab" value="<%= activeTab %>">
+            </form>
+            <div class="cm-chips" data-active-filter="<%= activeTab %>">
+              <button type="button" class="<%= activeTab === 'all' ? 'is-active' : '' %>" data-filter="all">All</button>
+              <button type="button" class="<%= activeTab === 'enrolled' ? 'is-active' : '' %>" data-filter="enrolled">Enrolled</button>
+              <button type="button" class="<%= activeTab === 'completed' ? 'is-active' : '' %>" data-filter="completed">Completed</button>
+              <button type="button" class="<%= activeTab === 'withdrawn' ? 'is-active' : '' %>" data-filter="withdrawn">Withdrawn</button>
+            </div>
+          </div>
+          <div class="studies-list" id="ongoingList">
+            <% const studiesList = Array.isArray(studies) ? studies : []; %>
+            <% if (studiesList.length) { %>
+              <ul class="dash-list" data-studies-list>
+                <% studiesList.forEach(function(item) { %>
+                  <li class="dash-list-item cm-row"
+                    data-study-id="<%= item.id %>"
+                    data-status="<%= (item.status || '').toLowerCase() %>"
+                    data-title="<%= item.title %>"
+                    data-tags="<%= (item.tags || []).join(',') %>"
+                    data-summary="<%= item.summary || '' %>"
+                    data-code="<%= item.code || '' %>"
+                    data-study-row>
+                    <div class="dash-list-main">
+                      <div class="dash-list-title"><%= item.title %></div>
+                      <% if (item.status) { %>
+                        <div class="dash-list-meta">
+                          <span class="status status--<%= item.status.toLowerCase() %>"><%= item.status %></span>
+                          <% if (item.studyStatus) { %> • Study is <%= item.studyStatus.toLowerCase() %><% } %>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="dash-list-actions">
+                      <button
+                        type="button"
+                        class="cm-btn cm-btn--ghost view-study"
+                        data-view-study-id="<%= item.id %>"
+                        data-study-id="<%= item.id %>">View</button>
+                      <% if (item.status === 'ENROLLED') { %>
+                        <form class="js-unenroll-form" action="/participant/unenroll/<%= item.enrollmentId %>" method="post">
+                          <button type="button" class="cm-btn cm-btn--danger-ghost js-unenroll" data-title="<%= item.title %>">Unenroll</button>
+                        </form>
+                      <% } else if (item.status === 'COMPLETED' || item.status === 'WITHDRAWN') { %>
+                        <form class="js-remove-study-form" action="/participant/studies/<%= item.id %>/remove" method="post">
+                          <button
+                            type="button"
+                            class="cm-btn cm-btn--danger-ghost js-remove-study"
+                            data-url="/participant/studies/<%= item.id %>/remove"
+                            data-title="<%= item.title %>">
+                            Remove
+                          </button>
+                          <noscript>
+                            <button type="submit" class="cm-btn cm-btn--danger-ghost">Remove</button>
+                          </noscript>
+                        </form>
+                      <% } %>
+                    </div>
+                  </li>
+                <% }); %>
+              </ul>
+            <% } else { %>
+              <p class="dash-empty">No studies yet.</p>
+            <% } %>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="dash-rail">
+      <section class="cm-card cm-pane cm-pane--rail" data-trending-rail>
+        <header class="cm-pane__head">
+          <h2 class="cm-card__title">Trending</h2>
+        </header>
+        <div class="cm-pane__scroll">
+          <ul class="cm-list">
+            <% if (Array.isArray(trending) && trending.length) { %>
+              <%- include('partials/trending-list', { items: trending }) %>
+            <% } else { %>
+              <li class="cm-row cm-row--empty">
+                <span class="dash-empty">Nothing trending yet.</span>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<%- include('partials/search-lite-overlay') %>
+<%- include('partials/confirm') %>
+<div data-study-modal-host></div>
+<script src="/static/js/study-modal.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+<script src="/js/search-lite.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>

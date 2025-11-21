@@ -1,0 +1,98 @@
+<%
+  const existingBodyClass = (typeof bodyClass === "string" && bodyClass.trim().length > 0)
+    ? bodyClass.trim()
+    : "";
+  bodyClass = [existingBodyClass, "auth-shell"].filter(Boolean).join(" ");
+  role = (typeof role === 'string' && role.toUpperCase() === 'RESEARCHER') ? 'RESEARCHER' : 'PARTICIPANT';
+  pageId = "signup";
+  pageKind = "auth";
+%>
+
+<div class="auth-shell-frame" data-page="signup">
+  <div class="auth-wrapper">
+    <%- include('partials/brand-pill') %>
+    <div class="cm-utility">
+      <button class="cm-info" type="button" aria-expanded="false" aria-controls="cm-help" aria-haspopup="dialog">
+        <span class="sr-only">How to use this</span>
+        i
+      </button>
+      <div id="cm-help" class="cm-help is-hidden" role="dialog" aria-label="How to use Consent Manager" tabindex="-1">
+        <h2 class="cm-help-title">What do you want to do?</h2>
+        <ul class="cm-help-list">
+          <li><a href="/docs/participant" data-help-action="select-participant">🟡 Participant onboarding guide</a></li>
+          <li><a href="/docs/researcher" data-help-action="select-researcher">🖊️ Researcher quickstart</a></li>
+          <li><a href="/docs/consent">📚 Consent rules / FAQ</a></li>
+        </ul>
+        <p class="cm-help-hint">Tip: you can change roles later.</p>
+      </div>
+    </div>
+
+    <div class="cm-card">
+      <div class="cm-card-body">
+        <div>
+          <h1 class="cm-title">Create your Consent Manager account</h1>
+          <p class="cm-subtitle">Set up access to manage studies or join as a participant.</p>
+        </div>
+
+        <% if (typeof error !== 'undefined' && error) { %>
+          <div class="alert-error"><%= error %></div>
+        <% } %>
+        <% if (typeof notice !== 'undefined' && notice) { %>
+          <div class="notice"><%= notice %></div>
+        <% } %>
+
+        <form method="post" action="/signup" class="cm-form">
+          <div class="cm-field">
+            <label class="cm-label" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="cm-input"
+                   autocomplete="email" value="<%= (typeof email !== 'undefined' && email) ? email : '' %>">
+          </div>
+
+          <div class="cm-field">
+            <label class="cm-label" for="password">Password</label>
+            <input id="password" name="password" type="password" required class="cm-input"
+                   autocomplete="new-password" minlength="6">
+          </div>
+
+          <input type="hidden" name="role" id="roleInput" value="<%= (role || 'PARTICIPANT') %>">
+
+          <p class="cm-role-label" id="roleToggleLabel">Select your role</p>
+          <div id="roleToggle"
+               class="cm-role-toggle cm-role-grid"
+               role="radiogroup"
+               aria-labelledby="roleToggleLabel">
+            <button type="button"
+                    id="roleParticipant"
+                    class="cm-role role-tile <%= (role || 'PARTICIPANT') === 'PARTICIPANT' ? 'is-active' : '' %>"
+                    data-role="PARTICIPANT"
+                    role="radio"
+                    aria-checked="<%= (role || 'PARTICIPANT') === 'PARTICIPANT' %>"
+                    tabindex="<%= (role || 'PARTICIPANT') === 'PARTICIPANT' ? '0' : '-1' %>">
+              <span class="cm-role-title">Participant</span>
+              <span class="cm-role-text">Join studies, manage your consents.</span>
+            </button>
+
+            <button type="button"
+                    id="roleResearcher"
+                    class="cm-role role-tile <%= role === 'RESEARCHER' ? 'is-active' : '' %>"
+                    data-role="RESEARCHER"
+                    role="radio"
+                    aria-checked="<%= role === 'RESEARCHER' %>"
+                    tabindex="<%= role === 'RESEARCHER' ? '0' : '-1' %>">
+              <span class="cm-role-title">Researcher</span>
+              <span class="cm-role-text">Create studies, export participants.</span>
+            </button>
+          </div>
+
+          <button type="submit" class="cm-submit">Create account</button>
+        </form>
+
+        <div class="cm-footer">
+          <span>Have an account?</span>
+          <a class="cm-link" href="/login">Log in</a>
+        </div>
+      </div>
+    </div>
+    <div class="cm-overlay is-hidden" id="cm-overlay" aria-hidden="true"></div>
+  </div>
+</div>

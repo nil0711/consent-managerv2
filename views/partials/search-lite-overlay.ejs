@@ -1,0 +1,18 @@
+<div id="cm-search-lite" class="cm-search-overlay" hidden>
+  <div class="cm-search-overlay__backdrop" data-close></div>
+  <div class="cm-search-overlay__panel" role="dialog" aria-modal="true" aria-label="Search all studies">
+    <header class="cm-search-overlay__head">
+      <input type="text" class="cm-input" placeholder="Search studies…" data-search-lite-input autocomplete="off" />
+      <div class="cm-search-overlay__filters">
+        <button type="button" data-sort="relevance" class="is-active">Relevance</button>
+        <button type="button" data-sort="freshness">Newest</button>
+        <button type="button" data-sort="popularity">Popular</button>
+      </div>
+    </header>
+    <div class="cm-search-overlay__body" data-results role="listbox" aria-label="Search results"></div>
+    <footer class="cm-search-overlay__foot">
+      <span data-meta></span>
+      <button type="button" class="cm-btn cm-btn--ghost" data-close>Close (Esc)</button>
+    </footer>
+  </div>
+</div>

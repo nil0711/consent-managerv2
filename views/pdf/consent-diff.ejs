@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Consent Comparison</title>
+    <style>
+      body {
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: #0f172a;
+        margin: 0;
+        padding: 32px 36px;
+        background: #ffffff;
+        line-height: 1.45;
+        font-size: 13px;
+      }
+      header { border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 22px; }
+      h1 { margin: 0; font-size: 22px; color: #111827; }
+      h2 { margin: 20px 0 10px; font-size: 16px; color: #1f2937; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 18px; }
+      .card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; background: #f8fafc; }
+      .card h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: #475569; }
+      ul { margin: 6px 0 0; padding-left: 20px; }
+      ul li { margin-bottom: 4px; }
+      footer { margin-top: 28px; padding-top: 16px; border-top: 2px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; }
+      .doc-meta { font-size: 12px; color: #475569; }
+      .doc-meta strong { color: #1f2937; }
+      .qr { width: 120px; height: 120px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Consent Comparison</h1>
+      <div style="font-size:12px;color:#475569;margin-top:6px;">
+        Issued <%= (issuedAt || new Date()).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %>
+      </div>
+      <div style="margin-top:10px;font-size:14px;color:#1f2937;">
+        <strong>Study:</strong> <%= study.title %>
+      </div>
+    </header>
+
+    <section>
+      <h2>Compared versions</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>From</h3>
+          <div><strong><%= from.version ? `Version ${from.version}` : "Snapshot" %></strong></div>
+          <div>ID: <%= from.id %></div>
+          <div>Saved <%= new Date(from.createdAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %></div>
+        </div>
+        <div class="card">
+          <h3>To</h3>
+          <div><strong><%= to.version ? `Version ${to.version}` : "Snapshot" %></strong></div>
+          <div>ID: <%= to.id %></div>
+          <div>Saved <%= new Date(to.createdAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Added</h3>
+          <% if (added.length) { %>
+            <ul>
+              <% added.forEach((item) => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          <% } else { %>
+            <p>No additions.</p>
+          <% } %>
+        </div>
+        <div class="card">
+          <h3>Removed</h3>
+          <% if (removed.length) { %>
+            <ul>
+              <% removed.forEach((item) => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          <% } else { %>
+            <p>No removals.</p>
+          <% } %>
+        </div>
+        <div class="card">
+          <h3>Unchanged</h3>
+          <% if (unchanged.length) { %>
+            <ul>
+              <% unchanged.forEach((item) => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          <% } else { %>
+            <p>No overlap.</p>
+          <% } %>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="doc-meta">
+        <div><strong>Document ID:</strong> <%= docId %></div>
+        <div><strong>Verify:</strong> <%= verifyUrl %></div>
+      </div>
+      <img class="qr" src="<%- qr %>" alt="Verification QR code" />
+    </footer>
+  </body>
+</html>

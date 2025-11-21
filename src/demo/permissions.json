@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "perm_0001",
+    "code": "ACTIVITY_DAILY_STEP_SUMMARY",
+    "label": "Share daily step summary",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review step summary on a daily cadence."
+  },
+  {
+    "id": "perm_0002",
+    "code": "ACTIVITY_WEEKLY_STEP_SUMMARY",
+    "label": "Share weekly step summary",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review step summary on a weekly cadence."
+  },
+  {
+    "id": "perm_0003",
+    "code": "ACTIVITY_MONTHLY_STEP_SUMMARY",
+    "label": "Share monthly step summary",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review step summary on a monthly cadence."
+  },
+  {
+    "id": "perm_0004",
+    "code": "ACTIVITY_QUARTERLY_STEP_SUMMARY",
+    "label": "Share quarterly step summary",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review step summary on a quarterly cadence."
+  },
+  {
+    "id": "perm_0005",
+    "code": "ACTIVITY_ANNUAL_STEP_SUMMARY",
+    "label": "Share annual step summary",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review step summary on a annual cadence."
+  },
+  {
+    "id": "perm_0006",
+    "code": "ACTIVITY_ADHOC_STEP_SUMMARY",
+    "label": "Share on-demand step summary",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review step summary on a on-demand cadence."
+  },
+  {
+    "id": "perm_0007",
+    "code": "ACTIVITY_DAILY_SESSION_LOG",
+    "label": "Share daily session log",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review session log on a daily cadence."
+  },
+  {
+    "id": "perm_0008",
+    "code": "ACTIVITY_WEEKLY_SESSION_LOG",
+    "label": "Share weekly session log",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review session log on a weekly cadence."
+  },
+  {
+    "id": "perm_0009",
+    "code": "ACTIVITY_MONTHLY_SESSION_LOG",
+    "label": "Share monthly session log",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review session log on a monthly cadence."
+  },
+  {
+    "id": "perm_0010",
+    "code": "ACTIVITY_QUARTERLY_SESSION_LOG",
+    "label": "Share quarterly session log",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review session log on a quarterly cadence."
+  },
+  {
+    "id": "perm_0011",
+    "code": "ACTIVITY_ANNUAL_SESSION_LOG",
+    "label": "Share annual session log",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review session log on a annual cadence."
+  },
+  {
+    "id": "perm_0012",
+    "code": "ACTIVITY_ADHOC_SESSION_LOG",
+    "label": "Share on-demand session log",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review session log on a on-demand cadence."
+  },
+  {
+    "id": "perm_0013",
+    "code": "ACTIVITY_DAILY_COMMUTE_TRACE",
+    "label": "Share daily commute trace",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review commute trace on a daily cadence."
+  },
+  {
+    "id": "perm_0014",
+    "code": "ACTIVITY_WEEKLY_COMMUTE_TRACE",
+    "label": "Share weekly commute trace",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review commute trace on a weekly cadence."
+  },
+  {
+    "id": "perm_0015",
+    "code": "ACTIVITY_MONTHLY_COMMUTE_TRACE",
+    "label": "Share monthly commute trace",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review commute trace on a monthly cadence."
+  },
+  {
+    "id": "perm_0016",
+    "code": "ACTIVITY_QUARTERLY_COMMUTE_TRACE",
+    "label": "Share quarterly commute trace",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review commute trace on a quarterly cadence."
+  },
+  {
+    "id": "perm_0017",
+    "code": "ACTIVITY_ANNUAL_COMMUTE_TRACE",
+    "label": "Share annual commute trace",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review commute trace on a annual cadence."
+  },
+  {
+    "id": "perm_0018",
+    "code": "ACTIVITY_ADHOC_COMMUTE_TRACE",
+    "label": "Share on-demand commute trace",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review commute trace on a on-demand cadence."
+  },
+  {
+    "id": "perm_0019",
+    "code": "ACTIVITY_DAILY_MOBILITY_HEATMAP",
+    "label": "Share daily mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mobility heatmap on a daily cadence."
+  },
+  {
+    "id": "perm_0020",
+    "code": "ACTIVITY_WEEKLY_MOBILITY_HEATMAP",
+    "label": "Share weekly mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mobility heatmap on a weekly cadence."
+  },
+  {
+    "id": "perm_0021",
+    "code": "ACTIVITY_MONTHLY_MOBILITY_HEATMAP",
+    "label": "Share monthly mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mobility heatmap on a monthly cadence."
+  },
+  {
+    "id": "perm_0022",
+    "code": "ACTIVITY_QUARTERLY_MOBILITY_HEATMAP",
+    "label": "Share quarterly mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review mobility heatmap on a quarterly cadence."
+  },
+  {
+    "id": "perm_0023",
+    "code": "ACTIVITY_ANNUAL_MOBILITY_HEATMAP",
+    "label": "Share annual mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mobility heatmap on a annual cadence."
+  },
+  {
+    "id": "perm_0024",
+    "code": "ACTIVITY_ADHOC_MOBILITY_HEATMAP",
+    "label": "Share on-demand mobility heatmap",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review mobility heatmap on a on-demand cadence."
+  },
+  {
+    "id": "perm_0025",
+    "code": "ACTIVITY_DAILY_SLEEP_CYCLE",
+    "label": "Share daily sleep cycle",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review sleep cycle on a daily cadence."
+  },
+  {
+    "id": "perm_0026",
+    "code": "ACTIVITY_WEEKLY_SLEEP_CYCLE",
+    "label": "Share weekly sleep cycle",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review sleep cycle on a weekly cadence."
+  },
+  {
+    "id": "perm_0027",
+    "code": "ACTIVITY_MONTHLY_SLEEP_CYCLE",
+    "label": "Share monthly sleep cycle",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep cycle on a monthly cadence."
+  },
+  {
+    "id": "perm_0028",
+    "code": "ACTIVITY_QUARTERLY_SLEEP_CYCLE",
+    "label": "Share quarterly sleep cycle",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep cycle on a quarterly cadence."
+  },
+  {
+    "id": "perm_0029",
+    "code": "ACTIVITY_ANNUAL_SLEEP_CYCLE",
+    "label": "Share annual sleep cycle",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep cycle on a annual cadence."
+  },
+  {
+    "id": "perm_0030",
+    "code": "ACTIVITY_ADHOC_SLEEP_CYCLE",
+    "label": "Share on-demand sleep cycle",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review sleep cycle on a on-demand cadence."
+  },
+  {
+    "id": "perm_0031",
+    "code": "ACTIVITY_DAILY_RECOVERY_SCORE",
+    "label": "Share daily recovery score",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review recovery score on a daily cadence."
+  },
+  {
+    "id": "perm_0032",
+    "code": "ACTIVITY_WEEKLY_RECOVERY_SCORE",
+    "label": "Share weekly recovery score",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review recovery score on a weekly cadence."
+  },
+  {
+    "id": "perm_0033",
+    "code": "ACTIVITY_MONTHLY_RECOVERY_SCORE",
+    "label": "Share monthly recovery score",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review recovery score on a monthly cadence."
+  },
+  {
+    "id": "perm_0034",
+    "code": "ACTIVITY_QUARTERLY_RECOVERY_SCORE",
+    "label": "Share quarterly recovery score",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review recovery score on a quarterly cadence."
+  },
+  {
+    "id": "perm_0035",
+    "code": "ACTIVITY_ANNUAL_RECOVERY_SCORE",
+    "label": "Share annual recovery score",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review recovery score on a annual cadence."
+  },
+  {
+    "id": "perm_0036",
+    "code": "ACTIVITY_ADHOC_RECOVERY_SCORE",
+    "label": "Share on-demand recovery score",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review recovery score on a on-demand cadence."
+  },
+  {
+    "id": "perm_0037",
+    "code": "ACTIVITY_DAILY_SEDENTARY_STREAK",
+    "label": "Share daily sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a daily cadence."
+  },
+  {
+    "id": "perm_0038",
+    "code": "ACTIVITY_WEEKLY_SEDENTARY_STREAK",
+    "label": "Share weekly sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a weekly cadence."
+  },
+  {
+    "id": "perm_0039",
+    "code": "ACTIVITY_MONTHLY_SEDENTARY_STREAK",
+    "label": "Share monthly sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a monthly cadence."
+  },
+  {
+    "id": "perm_0040",
+    "code": "ACTIVITY_QUARTERLY_SEDENTARY_STREAK",
+    "label": "Share quarterly sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a quarterly cadence."
+  },
+  {
+    "id": "perm_0041",
+    "code": "ACTIVITY_ANNUAL_SEDENTARY_STREAK",
+    "label": "Share annual sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a annual cadence."
+  },
+  {
+    "id": "perm_0042",
+    "code": "ACTIVITY_ADHOC_SEDENTARY_STREAK",
+    "label": "Share on-demand sedentary streak",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sedentary streak on a on-demand cadence."
+  },
+  {
+    "id": "perm_0043",
+    "code": "ACTIVITY_DAILY_INTENSITY_ZONE",
+    "label": "Share daily intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a daily cadence."
+  },
+  {
+    "id": "perm_0044",
+    "code": "ACTIVITY_WEEKLY_INTENSITY_ZONE",
+    "label": "Share weekly intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a weekly cadence."
+  },
+  {
+    "id": "perm_0045",
+    "code": "ACTIVITY_MONTHLY_INTENSITY_ZONE",
+    "label": "Share monthly intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a monthly cadence."
+  },
+  {
+    "id": "perm_0046",
+    "code": "ACTIVITY_QUARTERLY_INTENSITY_ZONE",
+    "label": "Share quarterly intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a quarterly cadence."
+  },
+  {
+    "id": "perm_0047",
+    "code": "ACTIVITY_ANNUAL_INTENSITY_ZONE",
+    "label": "Share annual intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a annual cadence."
+  },
+  {
+    "id": "perm_0048",
+    "code": "ACTIVITY_ADHOC_INTENSITY_ZONE",
+    "label": "Share on-demand intensity zone",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review intensity zone on a on-demand cadence."
+  },
+  {
+    "id": "perm_0049",
+    "code": "ACTIVITY_DAILY_ACTIVE_MINUTES",
+    "label": "Share daily active minutes",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review active minutes on a daily cadence."
+  },
+  {
+    "id": "perm_0050",
+    "code": "ACTIVITY_WEEKLY_ACTIVE_MINUTES",
+    "label": "Share weekly active minutes",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review active minutes on a weekly cadence."
+  },
+  {
+    "id": "perm_0051",
+    "code": "ACTIVITY_MONTHLY_ACTIVE_MINUTES",
+    "label": "Share monthly active minutes",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review active minutes on a monthly cadence."
+  },
+  {
+    "id": "perm_0052",
+    "code": "ACTIVITY_QUARTERLY_ACTIVE_MINUTES",
+    "label": "Share quarterly active minutes",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review active minutes on a quarterly cadence."
+  },
+  {
+    "id": "perm_0053",
+    "code": "ACTIVITY_ANNUAL_ACTIVE_MINUTES",
+    "label": "Share annual active minutes",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review active minutes on a annual cadence."
+  },
+  {
+    "id": "perm_0054",
+    "code": "ACTIVITY_ADHOC_ACTIVE_MINUTES",
+    "label": "Share on-demand active minutes",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review active minutes on a on-demand cadence."
+  },
+  {
+    "id": "perm_0055",
+    "code": "ACTIVITY_DAILY_STANDING_TIME",
+    "label": "Share daily standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a daily cadence."
+  },
+  {
+    "id": "perm_0056",
+    "code": "ACTIVITY_WEEKLY_STANDING_TIME",
+    "label": "Share weekly standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a weekly cadence."
+  },
+  {
+    "id": "perm_0057",
+    "code": "ACTIVITY_MONTHLY_STANDING_TIME",
+    "label": "Share monthly standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a monthly cadence."
+  },
+  {
+    "id": "perm_0058",
+    "code": "ACTIVITY_QUARTERLY_STANDING_TIME",
+    "label": "Share quarterly standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a quarterly cadence."
+  },
+  {
+    "id": "perm_0059",
+    "code": "ACTIVITY_ANNUAL_STANDING_TIME",
+    "label": "Share annual standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a annual cadence."
+  },
+  {
+    "id": "perm_0060",
+    "code": "ACTIVITY_ADHOC_STANDING_TIME",
+    "label": "Share on-demand standing time",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review standing time on a on-demand cadence."
+  },
+  {
+    "id": "perm_0061",
+    "code": "ACTIVITY_DAILY_CYCLING_CADENCE",
+    "label": "Share daily cycling cadence",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review cycling cadence on a daily cadence."
+  },
+  {
+    "id": "perm_0062",
+    "code": "ACTIVITY_WEEKLY_CYCLING_CADENCE",
+    "label": "Share weekly cycling cadence",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review cycling cadence on a weekly cadence."
+  },
+  {
+    "id": "perm_0063",
+    "code": "ACTIVITY_MONTHLY_CYCLING_CADENCE",
+    "label": "Share monthly cycling cadence",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review cycling cadence on a monthly cadence."
+  },
+  {
+    "id": "perm_0064",
+    "code": "ACTIVITY_QUARTERLY_CYCLING_CADENCE",
+    "label": "Share quarterly cycling cadence",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review cycling cadence on a quarterly cadence."
+  },
+  {
+    "id": "perm_0065",
+    "code": "ACTIVITY_ANNUAL_CYCLING_CADENCE",
+    "label": "Share annual cycling cadence",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review cycling cadence on a annual cadence."
+  },
+  {
+    "id": "perm_0066",
+    "code": "ACTIVITY_ADHOC_CYCLING_CADENCE",
+    "label": "Share on-demand cycling cadence",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review cycling cadence on a on-demand cadence."
+  },
+  {
+    "id": "perm_0067",
+    "code": "ACTIVITY_DAILY_HEART_RATE_TREND",
+    "label": "Share daily heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a daily cadence."
+  },
+  {
+    "id": "perm_0068",
+    "code": "ACTIVITY_WEEKLY_HEART_RATE_TREND",
+    "label": "Share weekly heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a weekly cadence."
+  },
+  {
+    "id": "perm_0069",
+    "code": "ACTIVITY_MONTHLY_HEART_RATE_TREND",
+    "label": "Share monthly heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a monthly cadence."
+  },
+  {
+    "id": "perm_0070",
+    "code": "ACTIVITY_QUARTERLY_HEART_RATE_TREND",
+    "label": "Share quarterly heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a quarterly cadence."
+  },
+  {
+    "id": "perm_0071",
+    "code": "ACTIVITY_ANNUAL_HEART_RATE_TREND",
+    "label": "Share annual heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a annual cadence."
+  },
+  {
+    "id": "perm_0072",
+    "code": "ACTIVITY_ADHOC_HEART_RATE_TREND",
+    "label": "Share on-demand heart rate trend",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review heart rate trend on a on-demand cadence."
+  },
+  {
+    "id": "perm_0073",
+    "code": "ACTIVITY_DAILY_CALORIE_BURN",
+    "label": "Share daily calorie burn",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review calorie burn on a daily cadence."
+  },
+  {
+    "id": "perm_0074",
+    "code": "ACTIVITY_WEEKLY_CALORIE_BURN",
+    "label": "Share weekly calorie burn",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review calorie burn on a weekly cadence."
+  },
+  {
+    "id": "perm_0075",
+    "code": "ACTIVITY_MONTHLY_CALORIE_BURN",
+    "label": "Share monthly calorie burn",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review calorie burn on a monthly cadence."
+  },
+  {
+    "id": "perm_0076",
+    "code": "ACTIVITY_QUARTERLY_CALORIE_BURN",
+    "label": "Share quarterly calorie burn",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review calorie burn on a quarterly cadence."
+  },
+  {
+    "id": "perm_0077",
+    "code": "ACTIVITY_ANNUAL_CALORIE_BURN",
+    "label": "Share annual calorie burn",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review calorie burn on a annual cadence."
+  },
+  {
+    "id": "perm_0078",
+    "code": "ACTIVITY_ADHOC_CALORIE_BURN",
+    "label": "Share on-demand calorie burn",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review calorie burn on a on-demand cadence."
+  },
+  {
+    "id": "perm_0079",
+    "code": "ACTIVITY_DAILY_LIFTING_SETS",
+    "label": "Share daily lifting sets",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review lifting sets on a daily cadence."
+  },
+  {
+    "id": "perm_0080",
+    "code": "ACTIVITY_WEEKLY_LIFTING_SETS",
+    "label": "Share weekly lifting sets",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review lifting sets on a weekly cadence."
+  },
+  {
+    "id": "perm_0081",
+    "code": "ACTIVITY_MONTHLY_LIFTING_SETS",
+    "label": "Share monthly lifting sets",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review lifting sets on a monthly cadence."
+  },
+  {
+    "id": "perm_0082",
+    "code": "ACTIVITY_QUARTERLY_LIFTING_SETS",
+    "label": "Share quarterly lifting sets",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review lifting sets on a quarterly cadence."
+  },
+  {
+    "id": "perm_0083",
+    "code": "ACTIVITY_ANNUAL_LIFTING_SETS",
+    "label": "Share annual lifting sets",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review lifting sets on a annual cadence."
+  },
+  {
+    "id": "perm_0084",
+    "code": "ACTIVITY_ADHOC_LIFTING_SETS",
+    "label": "Share on-demand lifting sets",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review lifting sets on a on-demand cadence."
+  },
+  {
+    "id": "perm_0085",
+    "code": "ACTIVITY_DAILY_YOGA_FLOW",
+    "label": "Share daily yoga flow",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review yoga flow on a daily cadence."
+  },
+  {
+    "id": "perm_0086",
+    "code": "ACTIVITY_WEEKLY_YOGA_FLOW",
+    "label": "Share weekly yoga flow",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review yoga flow on a weekly cadence."
+  },
+  {
+    "id": "perm_0087",
+    "code": "ACTIVITY_MONTHLY_YOGA_FLOW",
+    "label": "Share monthly yoga flow",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review yoga flow on a monthly cadence."
+  },
+  {
+    "id": "perm_0088",
+    "code": "ACTIVITY_QUARTERLY_YOGA_FLOW",
+    "label": "Share quarterly yoga flow",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review yoga flow on a quarterly cadence."
+  },
+  {
+    "id": "perm_0089",
+    "code": "ACTIVITY_ANNUAL_YOGA_FLOW",
+    "label": "Share annual yoga flow",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review yoga flow on a annual cadence."
+  },
+  {
+    "id": "perm_0090",
+    "code": "ACTIVITY_ADHOC_YOGA_FLOW",
+    "label": "Share on-demand yoga flow",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review yoga flow on a on-demand cadence."
+  },
+  {
+    "id": "perm_0091",
+    "code": "ACTIVITY_DAILY_INDOOR_WORKOUT",
+    "label": "Share daily indoor workout",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review indoor workout on a daily cadence."
+  },
+  {
+    "id": "perm_0092",
+    "code": "ACTIVITY_WEEKLY_INDOOR_WORKOUT",
+    "label": "Share weekly indoor workout",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review indoor workout on a weekly cadence."
+  },
+  {
+    "id": "perm_0093",
+    "code": "ACTIVITY_MONTHLY_INDOOR_WORKOUT",
+    "label": "Share monthly indoor workout",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review indoor workout on a monthly cadence."
+  },
+  {
+    "id": "perm_0094",
+    "code": "ACTIVITY_QUARTERLY_INDOOR_WORKOUT",
+    "label": "Share quarterly indoor workout",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review indoor workout on a quarterly cadence."
+  },
+  {
+    "id": "perm_0095",
+    "code": "ACTIVITY_ANNUAL_INDOOR_WORKOUT",
+    "label": "Share annual indoor workout",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review indoor workout on a annual cadence."
+  },
+  {
+    "id": "perm_0096",
+    "code": "ACTIVITY_ADHOC_INDOOR_WORKOUT",
+    "label": "Share on-demand indoor workout",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review indoor workout on a on-demand cadence."
+  },
+  {
+    "id": "perm_0097",
+    "code": "ACTIVITY_DAILY_OUTDOOR_SPRINT",
+    "label": "Share daily outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review outdoor sprint on a daily cadence."
+  },
+  {
+    "id": "perm_0098",
+    "code": "ACTIVITY_WEEKLY_OUTDOOR_SPRINT",
+    "label": "Share weekly outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review outdoor sprint on a weekly cadence."
+  },
+  {
+    "id": "perm_0099",
+    "code": "ACTIVITY_MONTHLY_OUTDOOR_SPRINT",
+    "label": "Share monthly outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review outdoor sprint on a monthly cadence."
+  },
+  {
+    "id": "perm_0100",
+    "code": "ACTIVITY_QUARTERLY_OUTDOOR_SPRINT",
+    "label": "Share quarterly outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review outdoor sprint on a quarterly cadence."
+  },
+  {
+    "id": "perm_0101",
+    "code": "ACTIVITY_ANNUAL_OUTDOOR_SPRINT",
+    "label": "Share annual outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review outdoor sprint on a annual cadence."
+  },
+  {
+    "id": "perm_0102",
+    "code": "ACTIVITY_ADHOC_OUTDOOR_SPRINT",
+    "label": "Share on-demand outdoor sprint",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review outdoor sprint on a on-demand cadence."
+  },
+  {
+    "id": "perm_0103",
+    "code": "ACTIVITY_DAILY_EVENING_WALK",
+    "label": "Share daily evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a daily cadence."
+  },
+  {
+    "id": "perm_0104",
+    "code": "ACTIVITY_WEEKLY_EVENING_WALK",
+    "label": "Share weekly evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a weekly cadence."
+  },
+  {
+    "id": "perm_0105",
+    "code": "ACTIVITY_MONTHLY_EVENING_WALK",
+    "label": "Share monthly evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a monthly cadence."
+  },
+  {
+    "id": "perm_0106",
+    "code": "ACTIVITY_QUARTERLY_EVENING_WALK",
+    "label": "Share quarterly evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a quarterly cadence."
+  },
+  {
+    "id": "perm_0107",
+    "code": "ACTIVITY_ANNUAL_EVENING_WALK",
+    "label": "Share annual evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a annual cadence."
+  },
+  {
+    "id": "perm_0108",
+    "code": "ACTIVITY_ADHOC_EVENING_WALK",
+    "label": "Share on-demand evening walk",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review evening walk on a on-demand cadence."
+  },
+  {
+    "id": "perm_0109",
+    "code": "ACTIVITY_DAILY_WEEKEND_HIKE",
+    "label": "Share daily weekend hike",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review weekend hike on a daily cadence."
+  },
+  {
+    "id": "perm_0110",
+    "code": "ACTIVITY_WEEKLY_WEEKEND_HIKE",
+    "label": "Share weekly weekend hike",
+    "category": "activity",
+    "defaultImportance": "required",
+    "description": "Allows the team to review weekend hike on a weekly cadence."
+  },
+  {
+    "id": "perm_0111",
+    "code": "ACTIVITY_MONTHLY_WEEKEND_HIKE",
+    "label": "Share monthly weekend hike",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review weekend hike on a monthly cadence."
+  },
+  {
+    "id": "perm_0112",
+    "code": "ACTIVITY_QUARTERLY_WEEKEND_HIKE",
+    "label": "Share quarterly weekend hike",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review weekend hike on a quarterly cadence."
+  },
+  {
+    "id": "perm_0113",
+    "code": "ACTIVITY_ANNUAL_WEEKEND_HIKE",
+    "label": "Share annual weekend hike",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review weekend hike on a annual cadence."
+  },
+  {
+    "id": "perm_0114",
+    "code": "ACTIVITY_ADHOC_WEEKEND_HIKE",
+    "label": "Share on-demand weekend hike",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review weekend hike on a on-demand cadence."
+  },
+  {
+    "id": "perm_0115",
+    "code": "ACTIVITY_DAILY_SPORTS_DRILL",
+    "label": "Share daily sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a daily cadence."
+  },
+  {
+    "id": "perm_0116",
+    "code": "ACTIVITY_WEEKLY_SPORTS_DRILL",
+    "label": "Share weekly sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a weekly cadence."
+  },
+  {
+    "id": "perm_0117",
+    "code": "ACTIVITY_MONTHLY_SPORTS_DRILL",
+    "label": "Share monthly sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a monthly cadence."
+  },
+  {
+    "id": "perm_0118",
+    "code": "ACTIVITY_QUARTERLY_SPORTS_DRILL",
+    "label": "Share quarterly sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a quarterly cadence."
+  },
+  {
+    "id": "perm_0119",
+    "code": "ACTIVITY_ANNUAL_SPORTS_DRILL",
+    "label": "Share annual sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a annual cadence."
+  },
+  {
+    "id": "perm_0120",
+    "code": "ACTIVITY_ADHOC_SPORTS_DRILL",
+    "label": "Share on-demand sports drill",
+    "category": "activity",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sports drill on a on-demand cadence."
+  },
+  {
+    "id": "perm_0121",
+    "code": "HEALTH_DAILY_BLOOD_PRESSURE_LOG",
+    "label": "Share daily blood pressure log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review blood pressure log on a daily cadence."
+  },
+  {
+    "id": "perm_0122",
+    "code": "HEALTH_WEEKLY_BLOOD_PRESSURE_LOG",
+    "label": "Share weekly blood pressure log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review blood pressure log on a weekly cadence."
+  },
+  {
+    "id": "perm_0123",
+    "code": "HEALTH_MONTHLY_BLOOD_PRESSURE_LOG",
+    "label": "Share monthly blood pressure log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review blood pressure log on a monthly cadence."
+  },
+  {
+    "id": "perm_0124",
+    "code": "HEALTH_QUARTERLY_BLOOD_PRESSURE_LOG",
+    "label": "Share quarterly blood pressure log",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review blood pressure log on a quarterly cadence."
+  },
+  {
+    "id": "perm_0125",
+    "code": "HEALTH_ANNUAL_BLOOD_PRESSURE_LOG",
+    "label": "Share annual blood pressure log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review blood pressure log on a annual cadence."
+  },
+  {
+    "id": "perm_0126",
+    "code": "HEALTH_ADHOC_BLOOD_PRESSURE_LOG",
+    "label": "Share on-demand blood pressure log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review blood pressure log on a on-demand cadence."
+  },
+  {
+    "id": "perm_0127",
+    "code": "HEALTH_DAILY_MOOD_CHECK_IN",
+    "label": "Share daily mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a daily cadence."
+  },
+  {
+    "id": "perm_0128",
+    "code": "HEALTH_WEEKLY_MOOD_CHECK_IN",
+    "label": "Share weekly mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a weekly cadence."
+  },
+  {
+    "id": "perm_0129",
+    "code": "HEALTH_MONTHLY_MOOD_CHECK_IN",
+    "label": "Share monthly mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a monthly cadence."
+  },
+  {
+    "id": "perm_0130",
+    "code": "HEALTH_QUARTERLY_MOOD_CHECK_IN",
+    "label": "Share quarterly mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a quarterly cadence."
+  },
+  {
+    "id": "perm_0131",
+    "code": "HEALTH_ANNUAL_MOOD_CHECK_IN",
+    "label": "Share annual mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a annual cadence."
+  },
+  {
+    "id": "perm_0132",
+    "code": "HEALTH_ADHOC_MOOD_CHECK_IN",
+    "label": "Share on-demand mood check-in",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mood check-in on a on-demand cadence."
+  },
+  {
+    "id": "perm_0133",
+    "code": "HEALTH_DAILY_MEDICATION_ADHERENCE",
+    "label": "Share daily medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a daily cadence."
+  },
+  {
+    "id": "perm_0134",
+    "code": "HEALTH_WEEKLY_MEDICATION_ADHERENCE",
+    "label": "Share weekly medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a weekly cadence."
+  },
+  {
+    "id": "perm_0135",
+    "code": "HEALTH_MONTHLY_MEDICATION_ADHERENCE",
+    "label": "Share monthly medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a monthly cadence."
+  },
+  {
+    "id": "perm_0136",
+    "code": "HEALTH_QUARTERLY_MEDICATION_ADHERENCE",
+    "label": "Share quarterly medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a quarterly cadence."
+  },
+  {
+    "id": "perm_0137",
+    "code": "HEALTH_ANNUAL_MEDICATION_ADHERENCE",
+    "label": "Share annual medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a annual cadence."
+  },
+  {
+    "id": "perm_0138",
+    "code": "HEALTH_ADHOC_MEDICATION_ADHERENCE",
+    "label": "Share on-demand medication adherence",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review medication adherence on a on-demand cadence."
+  },
+  {
+    "id": "perm_0139",
+    "code": "HEALTH_DAILY_BIOMETRIC_SNAPSHOT",
+    "label": "Share daily biometric snapshot",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review biometric snapshot on a daily cadence."
+  },
+  {
+    "id": "perm_0140",
+    "code": "HEALTH_WEEKLY_BIOMETRIC_SNAPSHOT",
+    "label": "Share weekly biometric snapshot",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review biometric snapshot on a weekly cadence."
+  },
+  {
+    "id": "perm_0141",
+    "code": "HEALTH_MONTHLY_BIOMETRIC_SNAPSHOT",
+    "label": "Share monthly biometric snapshot",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review biometric snapshot on a monthly cadence."
+  },
+  {
+    "id": "perm_0142",
+    "code": "HEALTH_QUARTERLY_BIOMETRIC_SNAPSHOT",
+    "label": "Share quarterly biometric snapshot",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review biometric snapshot on a quarterly cadence."
+  },
+  {
+    "id": "perm_0143",
+    "code": "HEALTH_ANNUAL_BIOMETRIC_SNAPSHOT",
+    "label": "Share annual biometric snapshot",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review biometric snapshot on a annual cadence."
+  },
+  {
+    "id": "perm_0144",
+    "code": "HEALTH_ADHOC_BIOMETRIC_SNAPSHOT",
+    "label": "Share on-demand biometric snapshot",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review biometric snapshot on a on-demand cadence."
+  },
+  {
+    "id": "perm_0145",
+    "code": "HEALTH_DAILY_NUTRITION_DIARY",
+    "label": "Share daily nutrition diary",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review nutrition diary on a daily cadence."
+  },
+  {
+    "id": "perm_0146",
+    "code": "HEALTH_WEEKLY_NUTRITION_DIARY",
+    "label": "Share weekly nutrition diary",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review nutrition diary on a weekly cadence."
+  },
+  {
+    "id": "perm_0147",
+    "code": "HEALTH_MONTHLY_NUTRITION_DIARY",
+    "label": "Share monthly nutrition diary",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review nutrition diary on a monthly cadence."
+  },
+  {
+    "id": "perm_0148",
+    "code": "HEALTH_QUARTERLY_NUTRITION_DIARY",
+    "label": "Share quarterly nutrition diary",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review nutrition diary on a quarterly cadence."
+  },
+  {
+    "id": "perm_0149",
+    "code": "HEALTH_ANNUAL_NUTRITION_DIARY",
+    "label": "Share annual nutrition diary",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review nutrition diary on a annual cadence."
+  },
+  {
+    "id": "perm_0150",
+    "code": "HEALTH_ADHOC_NUTRITION_DIARY",
+    "label": "Share on-demand nutrition diary",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review nutrition diary on a on-demand cadence."
+  },
+  {
+    "id": "perm_0151",
+    "code": "HEALTH_DAILY_RESTING_HEART_RATE",
+    "label": "Share daily resting heart rate",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review resting heart rate on a daily cadence."
+  },
+  {
+    "id": "perm_0152",
+    "code": "HEALTH_WEEKLY_RESTING_HEART_RATE",
+    "label": "Share weekly resting heart rate",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review resting heart rate on a weekly cadence."
+  },
+  {
+    "id": "perm_0153",
+    "code": "HEALTH_MONTHLY_RESTING_HEART_RATE",
+    "label": "Share monthly resting heart rate",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review resting heart rate on a monthly cadence."
+  },
+  {
+    "id": "perm_0154",
+    "code": "HEALTH_QUARTERLY_RESTING_HEART_RATE",
+    "label": "Share quarterly resting heart rate",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review resting heart rate on a quarterly cadence."
+  },
+  {
+    "id": "perm_0155",
+    "code": "HEALTH_ANNUAL_RESTING_HEART_RATE",
+    "label": "Share annual resting heart rate",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review resting heart rate on a annual cadence."
+  },
+  {
+    "id": "perm_0156",
+    "code": "HEALTH_ADHOC_RESTING_HEART_RATE",
+    "label": "Share on-demand resting heart rate",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review resting heart rate on a on-demand cadence."
+  },
+  {
+    "id": "perm_0157",
+    "code": "HEALTH_DAILY_BREATHING_PATTERN",
+    "label": "Share daily breathing pattern",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review breathing pattern on a daily cadence."
+  },
+  {
+    "id": "perm_0158",
+    "code": "HEALTH_WEEKLY_BREATHING_PATTERN",
+    "label": "Share weekly breathing pattern",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review breathing pattern on a weekly cadence."
+  },
+  {
+    "id": "perm_0159",
+    "code": "HEALTH_MONTHLY_BREATHING_PATTERN",
+    "label": "Share monthly breathing pattern",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review breathing pattern on a monthly cadence."
+  },
+  {
+    "id": "perm_0160",
+    "code": "HEALTH_QUARTERLY_BREATHING_PATTERN",
+    "label": "Share quarterly breathing pattern",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review breathing pattern on a quarterly cadence."
+  },
+  {
+    "id": "perm_0161",
+    "code": "HEALTH_ANNUAL_BREATHING_PATTERN",
+    "label": "Share annual breathing pattern",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review breathing pattern on a annual cadence."
+  },
+  {
+    "id": "perm_0162",
+    "code": "HEALTH_ADHOC_BREATHING_PATTERN",
+    "label": "Share on-demand breathing pattern",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review breathing pattern on a on-demand cadence."
+  },
+  {
+    "id": "perm_0163",
+    "code": "HEALTH_DAILY_STRESS_INDEX",
+    "label": "Share daily stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a daily cadence."
+  },
+  {
+    "id": "perm_0164",
+    "code": "HEALTH_WEEKLY_STRESS_INDEX",
+    "label": "Share weekly stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a weekly cadence."
+  },
+  {
+    "id": "perm_0165",
+    "code": "HEALTH_MONTHLY_STRESS_INDEX",
+    "label": "Share monthly stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a monthly cadence."
+  },
+  {
+    "id": "perm_0166",
+    "code": "HEALTH_QUARTERLY_STRESS_INDEX",
+    "label": "Share quarterly stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a quarterly cadence."
+  },
+  {
+    "id": "perm_0167",
+    "code": "HEALTH_ANNUAL_STRESS_INDEX",
+    "label": "Share annual stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a annual cadence."
+  },
+  {
+    "id": "perm_0168",
+    "code": "HEALTH_ADHOC_STRESS_INDEX",
+    "label": "Share on-demand stress index",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review stress index on a on-demand cadence."
+  },
+  {
+    "id": "perm_0169",
+    "code": "HEALTH_DAILY_GLUCOSE_TREND",
+    "label": "Share daily glucose trend",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review glucose trend on a daily cadence."
+  },
+  {
+    "id": "perm_0170",
+    "code": "HEALTH_WEEKLY_GLUCOSE_TREND",
+    "label": "Share weekly glucose trend",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review glucose trend on a weekly cadence."
+  },
+  {
+    "id": "perm_0171",
+    "code": "HEALTH_MONTHLY_GLUCOSE_TREND",
+    "label": "Share monthly glucose trend",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review glucose trend on a monthly cadence."
+  },
+  {
+    "id": "perm_0172",
+    "code": "HEALTH_QUARTERLY_GLUCOSE_TREND",
+    "label": "Share quarterly glucose trend",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review glucose trend on a quarterly cadence."
+  },
+  {
+    "id": "perm_0173",
+    "code": "HEALTH_ANNUAL_GLUCOSE_TREND",
+    "label": "Share annual glucose trend",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review glucose trend on a annual cadence."
+  },
+  {
+    "id": "perm_0174",
+    "code": "HEALTH_ADHOC_GLUCOSE_TREND",
+    "label": "Share on-demand glucose trend",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review glucose trend on a on-demand cadence."
+  },
+  {
+    "id": "perm_0175",
+    "code": "HEALTH_DAILY_HYDRATION_LOG",
+    "label": "Share daily hydration log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review hydration log on a daily cadence."
+  },
+  {
+    "id": "perm_0176",
+    "code": "HEALTH_WEEKLY_HYDRATION_LOG",
+    "label": "Share weekly hydration log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review hydration log on a weekly cadence."
+  },
+  {
+    "id": "perm_0177",
+    "code": "HEALTH_MONTHLY_HYDRATION_LOG",
+    "label": "Share monthly hydration log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review hydration log on a monthly cadence."
+  },
+  {
+    "id": "perm_0178",
+    "code": "HEALTH_QUARTERLY_HYDRATION_LOG",
+    "label": "Share quarterly hydration log",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review hydration log on a quarterly cadence."
+  },
+  {
+    "id": "perm_0179",
+    "code": "HEALTH_ANNUAL_HYDRATION_LOG",
+    "label": "Share annual hydration log",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review hydration log on a annual cadence."
+  },
+  {
+    "id": "perm_0180",
+    "code": "HEALTH_ADHOC_HYDRATION_LOG",
+    "label": "Share on-demand hydration log",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review hydration log on a on-demand cadence."
+  },
+  {
+    "id": "perm_0181",
+    "code": "HEALTH_DAILY_SLEEP_QUALITY",
+    "label": "Share daily sleep quality",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep quality on a daily cadence."
+  },
+  {
+    "id": "perm_0182",
+    "code": "HEALTH_WEEKLY_SLEEP_QUALITY",
+    "label": "Share weekly sleep quality",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep quality on a weekly cadence."
+  },
+  {
+    "id": "perm_0183",
+    "code": "HEALTH_MONTHLY_SLEEP_QUALITY",
+    "label": "Share monthly sleep quality",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep quality on a monthly cadence."
+  },
+  {
+    "id": "perm_0184",
+    "code": "HEALTH_QUARTERLY_SLEEP_QUALITY",
+    "label": "Share quarterly sleep quality",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep quality on a quarterly cadence."
+  },
+  {
+    "id": "perm_0185",
+    "code": "HEALTH_ANNUAL_SLEEP_QUALITY",
+    "label": "Share annual sleep quality",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review sleep quality on a annual cadence."
+  },
+  {
+    "id": "perm_0186",
+    "code": "HEALTH_ADHOC_SLEEP_QUALITY",
+    "label": "Share on-demand sleep quality",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review sleep quality on a on-demand cadence."
+  },
+  {
+    "id": "perm_0187",
+    "code": "HEALTH_DAILY_SYMPTOM_TRACKER",
+    "label": "Share daily symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a daily cadence."
+  },
+  {
+    "id": "perm_0188",
+    "code": "HEALTH_WEEKLY_SYMPTOM_TRACKER",
+    "label": "Share weekly symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a weekly cadence."
+  },
+  {
+    "id": "perm_0189",
+    "code": "HEALTH_MONTHLY_SYMPTOM_TRACKER",
+    "label": "Share monthly symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a monthly cadence."
+  },
+  {
+    "id": "perm_0190",
+    "code": "HEALTH_QUARTERLY_SYMPTOM_TRACKER",
+    "label": "Share quarterly symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a quarterly cadence."
+  },
+  {
+    "id": "perm_0191",
+    "code": "HEALTH_ANNUAL_SYMPTOM_TRACKER",
+    "label": "Share annual symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a annual cadence."
+  },
+  {
+    "id": "perm_0192",
+    "code": "HEALTH_ADHOC_SYMPTOM_TRACKER",
+    "label": "Share on-demand symptom tracker",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review symptom tracker on a on-demand cadence."
+  },
+  {
+    "id": "perm_0193",
+    "code": "HEALTH_DAILY_MINDFULNESS_STREAK",
+    "label": "Share daily mindfulness streak",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mindfulness streak on a daily cadence."
+  },
+  {
+    "id": "perm_0194",
+    "code": "HEALTH_WEEKLY_MINDFULNESS_STREAK",
+    "label": "Share weekly mindfulness streak",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mindfulness streak on a weekly cadence."
+  },
+  {
+    "id": "perm_0195",
+    "code": "HEALTH_MONTHLY_MINDFULNESS_STREAK",
+    "label": "Share monthly mindfulness streak",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review mindfulness streak on a monthly cadence."
+  },
+  {
+    "id": "perm_0196",
+    "code": "HEALTH_QUARTERLY_MINDFULNESS_STREAK",
+    "label": "Share quarterly mindfulness streak",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mindfulness streak on a quarterly cadence."
+  },
+  {
+    "id": "perm_0197",
+    "code": "HEALTH_ANNUAL_MINDFULNESS_STREAK",
+    "label": "Share annual mindfulness streak",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mindfulness streak on a annual cadence."
+  },
+  {
+    "id": "perm_0198",
+    "code": "HEALTH_ADHOC_MINDFULNESS_STREAK",
+    "label": "Share on-demand mindfulness streak",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review mindfulness streak on a on-demand cadence."
+  },
+  {
+    "id": "perm_0199",
+    "code": "HEALTH_DAILY_ENERGY_SURVEY",
+    "label": "Share daily energy survey",
+    "category": "health",
+    "defaultImportance": "required",
+    "description": "Allows the team to review energy survey on a daily cadence."
+  },
+  {
+    "id": "perm_0200",
+    "code": "HEALTH_WEEKLY_ENERGY_SURVEY",
+    "label": "Share weekly energy survey",
+    "category": "health",
+    "defaultImportance": "optional",
+    "description": "Allows the team to review energy survey on a weekly cadence."
+  }
+]

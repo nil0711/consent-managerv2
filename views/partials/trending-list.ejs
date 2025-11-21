@@ -1,0 +1,27 @@
+<% if (Array.isArray(items) && items.length) { %>
+  <% items.forEach(function(item) { const summary = item.summary || item.snippet || ""; %>
+    <li class="cm-row" data-study-id="<%= item.id %>">
+      <div class="cm-row__main">
+        <div class="cm-row__title"><%= item.title %></div>
+        <% if (Array.isArray(item.tags) && item.tags.length) { %>
+          <div class="cm-tags">
+            <% item.tags.slice(0, 4).forEach(function(tag) { %>
+              <span class="cm-chip"><%= tag %></span>
+            <% }); %>
+          </div>
+        <% } %>
+        <% if (summary) { %>
+          <p class="cm-row__snippet"><%= summary %></p>
+        <% } %>
+      </div>
+      <div class="cm-row__actions">
+        <button
+          type="button"
+          class="cm-btn cm-btn--ghost view-study"
+          data-cm-view-study
+          data-view-study-id="<%= item.id %>"
+          data-study-id="<%= item.id %>">View</button>
+      </div>
+    </li>
+  <% }); %>
+<% } %>

@@ -1,0 +1,259 @@
+<%
+  const ownerName = owner?.name || "Research team";
+  const ownerOrg = owner?.institution || "";
+  const summaryLead =
+    (summaryDetails && summaryDetails.summary) ||
+    summary ||
+    "Summary coming soon.";
+  const collectedTags = Array.isArray(collected) ? collected : [];
+  const retentionText = retention?.label || "No retention information provided.";
+  const effortText = effort || null;
+  const riskText = risk?.level ? `${risk.level} risk` : "Risk not specified.";
+  const consentStamp = consentVersion?.updatedLabel || null;
+  const isEnrolled = userEnrollment?.status === "ENROLLED";
+  const snapshotHref =
+    pdfLinks?.snapshot ||
+    (study?.id
+      ? `/participant/studies/${encodeURIComponent(study.id)}/pdf/snapshot`
+      : "#");
+  const historyHref = pdfLinks?.history || "#";
+  const receiptHref = pdfLinks?.receipt || "#";
+%>
+
+<div
+  class="cm-modal-host"
+  data-study-modal
+  data-study-id="<%= study?.id || '' %>"
+  data-enrollment-status="<%= userEnrollment?.status || 'UNENROLLED' %>"
+  data-context-version="<%= contextVersion || '' %>"
+  data-chat-fallback="<%= chatFallback || '' %>"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="study-modal-title"
+>
+  <div class="cm-modal-shell">
+    <header class="cm-modal-header">
+      <div>
+        <h2 id="study-modal-title"><%= study?.title || "Study" %></h2>
+        <% if (summaryLead) { %>
+          <p class="cm-modal-subhead"><%= summaryLead %></p>
+        <% } %>
+      </div>
+      <button
+        type="button"
+        class="cm-btn cm-btn--ghost js-close"
+        aria-label="Close study modal"
+      >
+        ×
+      </button>
+    </header>
+
+    <div class="cm-modal-grid">
+      <section
+        class="cm-pane cm-pane--permissions"
+        aria-labelledby="study-permissions-title"
+      >
+        <div class="cm-pane__head">
+          <h3 id="study-permissions-title">Permissions</h3>
+          <p class="cm-pane__hint">
+            Toggle what you agree to share. Required items stay locked.
+          </p>
+        </div>
+        <div class="cm-pane__scroll" data-permissions>
+          <ul class="cm-perms">
+            <% if (Array.isArray(permissions) && permissions.length) { %>
+              <% permissions.forEach(function (perm, idx) {
+                const switchId = `perm-${idx}`;
+              %>
+                <li
+                  class="cm-perm <%= perm.granted ? 'is-on' : '' %>"
+                  data-perm-id="<%= perm.id || perm.key %>"
+                  data-key="<%= perm.key %>"
+                >
+                  <button
+                    type="button"
+                    class="cm-switch <%= perm.granted ? 'is-on' : '' %> <%= perm.required ? 'is-locked' : '' %>"
+                    role="switch"
+                    aria-checked="<%= perm.granted ? 'true' : 'false' %>"
+                    data-input="<%= switchId %>"
+                    <%= perm.required ? 'aria-disabled="true"' : '' %>
+                  >
+                    <span class="cm-switch__knob" aria-hidden="true"></span>
+                  </button>
+                  <input
+                    id="<%= switchId %>"
+                    type="checkbox"
+                    class="js-perm"
+                    data-perm-key="<%= perm.key %>"
+                    data-required="<%= perm.required %>"
+                    <%= perm.granted ? 'checked' : '' %>
+                    <%= perm.required ? 'disabled' : '' %>
+                    style="display:none;"
+                    aria-hidden="true"
+                  />
+                  <div class="cm-perm__meta">
+                    <div class="cm-perm__title">
+                      <span><%= perm.name || perm.label %></span>
+                      <div class="cm-perm__badges">
+                        <% if (perm.required) { %>
+                          <span class="cm-badge">required</span>
+                        <% } %>
+                        <% if (perm.sensitive) { %>
+                          <span class="cm-badge cm-badge--warn">sensitive</span>
+                        <% } %>
+                      </div>
+                    </div>
+                    <% if (perm.blurb) { %>
+                      <p class="cm-perm__blurb"><%= perm.blurb %></p>
+                    <% } %>
+                    <% if (perm.description) { %>
+                      <p class="cm-perm__detail"><%= perm.description %></p>
+                    <% } %>
+                  </div>
+                </li>
+              <% }); %>
+            <% } else { %>
+              <li class="cm-perm cm-perm--empty">
+                <p>No permissions listed for this study.</p>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="cm-modal-right">
+        <section class="cm-pane" aria-labelledby="study-about-title">
+          <div class="cm-pane__head">
+            <h3 id="study-about-title">About this study</h3>
+          </div>
+          <div class="cm-pane__scroll">
+            <div class="cm-about">
+              <div class="cm-about__lead-block">
+                <p class="cm-about__lead"><%= summaryLead %></p>
+                <p class="cm-about__owner">
+                  <strong><%= ownerName %></strong>
+                  <% if (ownerOrg) { %>
+                    · <%= ownerOrg %>
+                  <% } %>
+                </p>
+              </div>
+              <ul class="cm-about__list">
+                <% if (summaryDetails?.why) { %>
+                  <li><strong>Why:</strong> <%= summaryDetails.why %></li>
+                <% } %>
+                <% if (summaryDetails?.time_effort || effortText) { %>
+                  <li>
+                    <strong>Time &amp; effort:</strong>
+                    <%= summaryDetails?.time_effort || effortText %>
+                  </li>
+                <% } %>
+                <% if (summaryDetails?.retention_phrase || retentionText) { %>
+                  <li>
+                    <strong>Retention:</strong>
+                    <%= summaryDetails?.retention_phrase || retentionText %>
+                  </li>
+                <% } %>
+                <% if (summaryDetails?.risks_short || riskText) { %>
+                  <li>
+                    <strong>Risks:</strong>
+                    <%= summaryDetails?.risks_short || riskText %>
+                  </li>
+                <% } %>
+              </ul>
+
+              <% if (collectedTags.length) { %>
+                <div class="cm-about__chips">
+                  <% collectedTags.forEach(function (tag) { %>
+                    <span class="cm-chip cm-chip--ghost"><%= tag %></span>
+                  <% }); %>
+                </div>
+              <% } %>
+
+              <% if (consentVersion?.version) { %>
+                <div class="cm-about__consent">
+                  <strong>Consent version:</strong>
+                  v<%= consentVersion.version %>
+                  <% if (consentStamp) { %>
+                    · Updated <%= consentStamp %>
+                  <% } %>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </section>
+
+        <section class="cm-pane" aria-labelledby="study-chat-title">
+          <div class="cm-pane__head">
+            <h3 id="study-chat-title">Ask about this study</h3>
+          </div>
+          <div class="cm-pane__scroll cm-pane__scroll--chat">
+            <div id="cm-chat" class="cm-chat" aria-live="polite"></div>
+          </div>
+          <div class="cm-chat__composer">
+            <form id="cm-chat-form" class="cm-chat__form">
+              <textarea
+                id="cm-chat-input"
+                class="cm-input cm-chat__input"
+                rows="1"
+                placeholder="Ask about purpose, data, or withdrawal. Enter sends, Shift+Enter adds a new line."
+              ></textarea>
+              <button
+                type="submit"
+                class="cm-btn cm-btn--accent"
+                id="cm-chat-send"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="cm-modal-footer">
+      <button
+        type="button"
+        class="cm-btn cm-btn--secondary js-save-version"
+        id="btnSaveVersion"
+      >
+        Save version
+      </button>
+      <button
+        type="button"
+        class="cm-btn cm-btn--secondary js-open-versions"
+        id="btnVersions"
+      >
+        Versions
+      </button>
+      <button
+        type="button"
+        class="cm-btn cm-btn--secondary"
+        id="btnDownload"
+        data-download-href="<%= snapshotHref %>"
+      >
+        Download consent
+      </button>
+      <% if (isEnrolled) { %>
+        <button
+          type="button"
+          class="cm-btn cm-btn--danger js-primary"
+          data-action="unenroll"
+          data-history-href="<%= historyHref %>"
+          data-receipt-href="<%= receiptHref %>"
+        >
+          Unenroll
+        </button>
+      <% } else { %>
+        <button
+          type="button"
+          class="cm-btn cm-btn--success js-primary"
+          data-action="enroll"
+          data-history-href="<%= historyHref %>"
+          data-receipt-href="<%= receiptHref %>"
+        >
+          Enroll
+        </button>
+      <% } %>
+    </footer>
+  </div>
+</div>

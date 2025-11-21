@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= typeof title !== 'undefined' && title ? title : 'Consent Manager' %></title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- The one true stylesheet; do not change its path -->
+  <link rel="stylesheet" href="/static/css/design.css?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>">
+  <!-- Optional: any page-level <head> injections -->
+  <%- typeof head !== 'undefined' ? head : '' %>
+</head>
+<body class="<%= typeof bodyClass !== 'undefined' ? bodyClass : '' %>" data-page="<%= (typeof pageKind !== 'undefined' && pageKind) ? pageKind : '' %>">
+  <main class="container-page">
+    <%- body %>
+  </main>
+
+  <script>
+    (function() {
+      var d = document.documentElement;
+      d.dataset.page = "<%= (typeof pageKind !== 'undefined' && pageKind) ? pageKind : ((typeof pageId !== 'undefined' && pageId) ? pageId : '') %>";
+    })();
+  </script>
+
+  <!-- Shared scripts that pages may rely on -->
+  <script src="/static/js/auth-help.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+  <script src="/static/js/menu.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+  <script src="/static/js/ui.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+  <% const isDashPage = typeof pageKind !== 'undefined' && pageKind && (pageKind.indexOf('dash-') === 0 || pageKind.endsWith('-dash')); %>
+  <% if (isDashPage) { %>
+    <script src="/static/js/http.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+    <script src="/static/js/dashboard.js?v=<%= (typeof assetsVersion !== 'undefined' && assetsVersion) ? assetsVersion : '1' %>" defer></script>
+  <% } %>
+</body>
+</html>

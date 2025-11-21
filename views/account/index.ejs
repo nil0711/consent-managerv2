@@ -1,0 +1,54 @@
+<main class="cm-page">
+  <div class="cm-topbar">
+    <a class="cm-pill cm-pill--home" href="/participant">Home</a>
+  </div>
+
+  <div class="cm-wrap">
+    <% if (error) { %>
+      <div class="cm-card" style="margin-bottom:16px; border:1px solid rgba(255,82,82,.35); color:#ff8b8b;">
+        <strong>Error:</strong> <%= error %>
+      </div>
+    <% } else if (saved) { %>
+      <div class="cm-card" style="margin-bottom:16px; border:1px solid rgba(255,219,88,.35); color:#ffdd69;">
+        Changes saved.
+      </div>
+    <% } %>
+
+    <section class="cm-card">
+      <div class="cm-h">Profile</div>
+      <p>Keep your account details up to date so collaborators know who you are.</p>
+
+      <form method="post" action="/account/profile">
+        <label>Name</label>
+        <input class="cm-field" name="name" value="<%= user?.name || '' %>" autocomplete="name">
+
+        <div style="height:10px"></div>
+        <label>Display name</label>
+        <input class="cm-field" name="displayName" value="<%= user?.displayName || '' %>" autocomplete="nickname">
+
+        <div style="height:10px"></div>
+        <label>Institution</label>
+        <input class="cm-field" name="institution" value="<%= user?.institution || '' %>" autocomplete="organization">
+
+        <div style="height:14px"></div>
+        <button class="cm-btn cm-btn--primary" type="submit">Save changes</button>
+      </form>
+    </section>
+
+    <section class="cm-card cm-danger" style="margin-top:16px;">
+      <div class="cm-h" style="color:#ff8b8b">Delete account</div>
+      <p>This removes your profile, studies, enrollments, and chat history. This action cannot be undone.</p>
+      <form method="post" action="/account/delete">
+        <label>Password (required)</label>
+        <input class="cm-field" type="password" name="password" autocomplete="current-password" required>
+
+        <div style="height:10px"></div>
+        <label>Type DELETE to confirm</label>
+        <input class="cm-field" name="confirm" placeholder="DELETE" required>
+
+        <div style="height:14px"></div>
+        <button class="cm-btn cm-btn--danger" type="submit">Delete everything</button>
+      </form>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Consent Receipt</title>
+    <style>
+      body {
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: #0f172a;
+        margin: 0;
+        padding: 32px 36px;
+        background: #ffffff;
+        line-height: 1.45;
+        font-size: 13px;
+      }
+      header { border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 22px; }
+      h1 { margin: 0; font-size: 22px; color: #111827; }
+      h2 { margin: 20px 0 10px; font-size: 16px; color: #1f2937; }
+      .card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; background: #f8fafc; }
+      dl { display: grid; grid-template-columns: 160px 1fr; gap: 8px 16px; margin: 16px 0 0; }
+      dt { font-weight: 600; color: #1f2937; }
+      dd { margin: 0; }
+      footer { margin-top: 28px; padding-top: 16px; border-top: 2px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; }
+      .doc-meta { font-size: 12px; color: #475569; }
+      .doc-meta strong { color: #1f2937; }
+      .qr { width: 120px; height: 120px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Consent Receipt</h1>
+      <div style="font-size:12px;color:#475569;margin-top:6px;">
+        Issued <%= (issuedAt || new Date()).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %>
+      </div>
+      <div style="margin-top:10px;font-size:14px;color:#1f2937;">
+        <strong>Study:</strong> <%= study.title %>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2 style="margin-top:0;">Action recorded</h2>
+      <p>
+        This receipt confirms that you
+        <strong>
+          <%= action === "withdrawn" ? "withdrawn from" : "enrolled in" %>
+        </strong>
+        the study on
+        <%= (issuedAt || new Date()).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %>.
+      </p>
+
+      <dl>
+        <div>
+          <dt>Participant</dt>
+          <dd><%= participant?.email || "Current session" %></dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd><%= action === "withdrawn" ? "Withdrawn" : "Enrolled" %></dd>
+        </div>
+        <div>
+          <dt>Latest version</dt>
+          <dd>
+            <% if (version) { %>
+              <strong><%= version.version ? `Version ${version.version}` : "Snapshot" %></strong>
+              saved <%= new Date(version.createdAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" }) %>
+            <% } else { %>
+              Not yet saved.
+            <% } %>
+          </dd>
+        </div>
+        <% if (summary?.summary) { %>
+          <div>
+            <dt>Study summary</dt>
+            <dd><%= summary.summary %></dd>
+          </div>
+        <% } %>
+      </dl>
+    </section>
+
+    <footer>
+      <div class="doc-meta">
+        <div><strong>Document ID:</strong> <%= docId %></div>
+        <div><strong>Verify:</strong> <%= verifyUrl %></div>
+      </div>
+      <img class="qr" src="<%- qr %>" alt="Verification QR code" />
+    </footer>
+  </body>
+</html>
